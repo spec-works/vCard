@@ -5,7 +5,7 @@ A complete multi-language library for parsing, validating, and serializing vCard
 ## Overview
 
 This project provides RFC 6350-compliant vCard parsers in three languages:
-- **.NET (C#)** - Production-ready with strongly typed builder, full serialization, validation, and 42+ tests
+- **.NET (C#)** - Production-ready with full serialization, validation, and 42+ tests
 - **Python** - Zero-dependency implementation with strongly typed builder API and type hints
 - **Rust** - Memory-safe implementation with strongly typed builder API and 12+ tests
 
@@ -58,13 +58,22 @@ var vcards = parser.Parse("BEGIN:VCARD\nVERSION:4.0\nFN:John Doe\nEND:VCARD");
 var vcard = vcards[0];
 Console.WriteLine(vcard.FormattedName); // "John Doe"
 
-// Creating with strongly typed builder API
-var newVcard = new VCardBuilder()
-    .WithVersion("4.0")
-    .WithFormattedName("John Doe")
-    .WithTelephone("+1-555-1234", TelType.Work)
-    .WithEmail("john@example.com", EmailType.Work)
-    .Build();
+// Creating a new vCard with object initializer
+var newVcard = new VCardObject
+{
+    Version = "4.0",
+    FormattedName = "John Doe",
+    Organization = "ABC Corporation",
+    Title = "Senior Software Engineer",
+    Telephones = new List<Telephone>
+    {
+        new Telephone { Value = "+1-555-1234", Types = TelType.Work | TelType.Voice }
+    },
+    Emails = new List<Email>
+    {
+        new Email { Value = "john@example.com", Types = EmailType.Work }
+    }
+};
 ```
 
 See [dotnet/README.md](dotnet/README.md) for details.
