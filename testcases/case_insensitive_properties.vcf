@@ -1,0 +1,8 @@
+begin:vcard
+version:4.0
+fn:Case Insensitive Test
+n:Test;Case;Insensitive;;
+tel;type=WORK:+1-555-1234
+email;TYPE=home:test@example.com
+ORG:Mixed Case Organization
+end:vcard

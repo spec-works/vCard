@@ -1,0 +1,7 @@
+BEGIN:VCARD
+FN:Order Test
+EMAIL:test@example.com
+TEL:+1-555-1234
+VERSION:4.0
+N:Test;Order;;;
+END:VCARD

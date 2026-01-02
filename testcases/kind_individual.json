@@ -1,0 +1,21 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "kind": "individual",
+      "fn": "John Smith",
+      "n": {
+        "family": "Smith",
+        "given": "John",
+        "additional": "",
+        "prefix": "",
+        "suffix": ""
+      },
+      "emails": [
+        {
+          "value": "john.smith@example.com"
+        }
+      ]
+    }
+  ]
+}

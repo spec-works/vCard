@@ -1,0 +1,27 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Multiple URLs Test",
+      "urls": [
+        {
+          "value": "https://www.company.com",
+          "types": ["work"]
+        },
+        {
+          "value": "https://personal-blog.com",
+          "types": ["home"]
+        },
+        {
+          "value": "https://github.com/username"
+        },
+        {
+          "value": "https://linkedin.com/in/username"
+        },
+        {
+          "value": "https://twitter.com/username"
+        }
+      ]
+    }
+  ]
+}

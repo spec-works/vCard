@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Sound Property Test
+SOUND:https://example.com/sounds/pronunciation.mp3
+SOUND;MEDIATYPE=audio/mpeg:https://example.com/name-pronunciation.mp3
+END:VCARD

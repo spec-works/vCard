@@ -1,0 +1,11 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Calendar Properties Test",
+      "fburl": "https://example.com/busy/janedoe",
+      "caladruri": "mailto:janedoe@example.com",
+      "caluri": "https://example.com/calendar/janedoe"
+    }
+  ]
+}

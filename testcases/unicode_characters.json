@@ -1,0 +1,52 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "José María García",
+      "n": {
+        "family": "García",
+        "given": "José",
+        "additional": "María",
+        "prefix": "",
+        "suffix": ""
+      },
+      "nickname": "Pepe",
+      "org": "Empresa Española S.A.",
+      "title": "Ingeniero de Software",
+      "notes": [
+        {
+          "value": "Caracteres especiales: ñ á é í ó ú ü ¿ ¡"
+        },
+        {
+          "value": "Chinese: 王秀英"
+        },
+        {
+          "value": "Japanese: 田中太郎"
+        },
+        {
+          "value": "Arabic: محمد أحمد"
+        },
+        {
+          "value": "Emoji: 👋 📧 📱"
+        }
+      ],
+      "emails": [
+        {
+          "value": "jose.garcia@empresa.es"
+        }
+      ],
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "Calle Principal 123",
+          "locality": "Madrid",
+          "region": "",
+          "postalcode": "28001",
+          "country": "España",
+          "types": ["work"]
+        }
+      ]
+    }
+  ]
+}

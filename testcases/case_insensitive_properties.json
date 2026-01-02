@@ -1,0 +1,28 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Case Insensitive Test",
+      "n": {
+        "family": "Test",
+        "given": "Case",
+        "additional": "Insensitive",
+        "prefix": "",
+        "suffix": ""
+      },
+      "telephones": [
+        {
+          "value": "+1-555-1234",
+          "types": ["WORK"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "test@example.com",
+          "types": ["home"]
+        }
+      ],
+      "org": "Mixed Case Organization"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+[package]
+name = "vcard"
+version = "1.0.0"
+edition = "2021"
+authors = ["VCard Parser Team"]
+description = "A Rust library for parsing and generating vCard (RFC 6350) data"
+license = "MIT"
+keywords = ["vcard", "parser", "contact", "rfc6350"]
+categories = ["parser-implementations", "encoding"]
+
+[dependencies]
+
+[dev-dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"

@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Single Name Person
+N:SingleName;;;;
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN:No Last Name
+N:;FirstOnly;;;
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN:Address with Empty Components
+ADR;TYPE=home:;;123 Main St;;CA;90210;
+END:VCARD

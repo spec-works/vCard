@@ -1,0 +1,38 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Phone Type Test",
+      "telephones": [
+        {
+          "value": "+1-555-1111",
+          "types": ["work", "voice", "cell"]
+        },
+        {
+          "value": "+1-555-2222",
+          "types": ["home", "voice"]
+        },
+        {
+          "value": "+1-555-3333",
+          "types": ["work", "fax"]
+        },
+        {
+          "value": "+1-555-4444",
+          "types": ["cell", "text"]
+        },
+        {
+          "value": "+1-555-5555",
+          "types": ["video"]
+        },
+        {
+          "value": "+1-555-6666",
+          "types": ["pager"]
+        },
+        {
+          "value": "+1-555-7777",
+          "types": ["textphone"]
+        }
+      ]
+    }
+  ]
+}

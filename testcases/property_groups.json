@@ -1,0 +1,34 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Property Group Test",
+      "groups": [
+        {
+          "group": "item1",
+          "telephone": {
+            "value": "+1-555-1111",
+            "types": ["work"]
+          },
+          "X-ABLABEL": "Main Office"
+        },
+        {
+          "group": "item2",
+          "telephone": {
+            "value": "+1-555-2222",
+            "types": ["home"]
+          },
+          "X-ABLABEL": "Personal"
+        },
+        {
+          "group": "item3",
+          "email": {
+            "value": "work@example.com",
+            "types": ["work"]
+          },
+          "X-ABLABEL": "Work Email"
+        }
+      ]
+    }
+  ]
+}

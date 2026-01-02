@@ -1,0 +1,24 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Instant Messaging Test",
+      "impps": [
+        {
+          "value": "xmpp:alice@example.com",
+          "types": ["home"]
+        },
+        {
+          "value": "sip:bob@example.com",
+          "types": ["work"]
+        },
+        {
+          "value": "skype:username"
+        },
+        {
+          "value": "aim:screenname"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "kind": "org",
+      "fn": "Acme Corporation",
+      "org": "Acme Corporation",
+      "telephones": [
+        {
+          "value": "+1-555-100-1000",
+          "types": ["work"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "info@acme.com"
+        }
+      ],
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "1000 Corporate Blvd",
+          "locality": "Business City",
+          "region": "ST",
+          "postalcode": "10000",
+          "country": "USA",
+          "types": ["work"]
+        }
+      ],
+      "urls": [
+        {
+          "value": "https://www.acme.com"
+        }
+      ]
+    }
+  ]
+}

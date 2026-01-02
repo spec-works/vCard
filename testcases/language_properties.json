@@ -1,0 +1,27 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Language Test",
+      "languages": [
+        {
+          "value": "en",
+          "types": ["work"],
+          "pref": "1"
+        },
+        {
+          "value": "fr",
+          "types": ["work"],
+          "pref": "2"
+        },
+        {
+          "value": "es",
+          "types": ["home"]
+        },
+        {
+          "value": "zh"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:4.0
+KIND:org
+FN:Acme Corporation
+ORG:Acme Corporation
+TEL;TYPE=work:+1-555-100-1000
+EMAIL:info@acme.com
+ADR;TYPE=work:;;1000 Corporate Blvd;Business City;ST;10000;USA
+URL:https://www.acme.com
+END:VCARD

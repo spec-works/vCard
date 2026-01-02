@@ -1,0 +1,92 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Alexander James Thompson",
+      "n": {
+        "family": "Thompson",
+        "given": "Alexander",
+        "additional": "James",
+        "prefix": "Mr.",
+        "suffix": "Jr."
+      },
+      "nickname": "Alex",
+      "gender": "M",
+      "bday": "19850415",
+      "anniversary": "20100612",
+      "org": "Tech Innovations Inc.;Engineering Department",
+      "title": "Chief Technology Officer",
+      "role": "Executive",
+      "telephones": [
+        {
+          "value": "+1-555-100-2000",
+          "types": ["work", "voice"]
+        },
+        {
+          "value": "+1-555-100-2001",
+          "types": ["home"]
+        },
+        {
+          "value": "+1-555-100-2002",
+          "types": ["cell"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "alex.thompson@techinnovations.com",
+          "types": ["work"]
+        },
+        {
+          "value": "alex@home.net",
+          "types": ["home"]
+        }
+      ],
+      "addresses": [
+        {
+          "pobox": "Suite 500",
+          "extended": "Building A",
+          "street": "999 Silicon Valley Blvd",
+          "locality": "San Jose",
+          "region": "CA",
+          "postalcode": "95110",
+          "country": "USA",
+          "types": ["work"]
+        },
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "123 Residential Lane",
+          "locality": "Palo Alto",
+          "region": "CA",
+          "postalcode": "94301",
+          "country": "USA",
+          "types": ["home"]
+        }
+      ],
+      "geo": "geo:37.3861,-122.0839",
+      "tz": "-08:00",
+      "urls": [
+        {
+          "value": "https://www.techinnovations.com"
+        },
+        {
+          "value": "https://alexthompson.com",
+          "types": ["home"]
+        }
+      ],
+      "notes": [
+        {
+          "value": "Important client contact. Available Mon-Fri 9am-5pm PST."
+        }
+      ],
+      "categories": [
+        {
+          "value": "VIP,Technology,Executive"
+        }
+      ],
+      "uid": "urn:uuid:4fbe8971-0bc3-424c-9c26-36c3e1eff6b1",
+      "rev": "20231201T120000Z",
+      "prodid": "-//Tech Innovations Inc.//Contact Manager v1.0//EN"
+    }
+  ]
+}

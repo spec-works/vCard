@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Phone Type Test
+TEL;TYPE=work,voice,cell:+1-555-1111
+TEL;TYPE=home,voice:+1-555-2222
+TEL;TYPE=work,fax:+1-555-3333
+TEL;TYPE=cell,text:+1-555-4444
+TEL;TYPE=video:+1-555-5555
+TEL;TYPE=pager:+1-555-6666
+TEL;TYPE=textphone:+1-555-7777
+END:VCARD

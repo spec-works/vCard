@@ -1,0 +1,17 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Public Key Test",
+      "keys": [
+        {
+          "value": "https://example.com/keys/john-doe.pgp"
+        },
+        {
+          "value": "https://keyserver.example.com/key/12345",
+          "mediatype": "application/pgp-keys"
+        }
+      ]
+    }
+  ]
+}

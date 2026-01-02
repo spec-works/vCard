@@ -1,0 +1,30 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Complex Address Test",
+      "addresses": [
+        {
+          "pobox": "PO Box 1234",
+          "extended": "Suite 500",
+          "street": "1000 Corporate Boulevard",
+          "locality": "Metropolis",
+          "region": "NY",
+          "postalcode": "10001",
+          "country": "United States of America",
+          "types": ["work"]
+        },
+        {
+          "pobox": "",
+          "extended": "Apartment 3B",
+          "street": "456 Residential Street",
+          "locality": "Smalltown",
+          "region": "CA",
+          "postalcode": "90210",
+          "country": "USA",
+          "types": ["home"]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Alice Anderson",
+      "emails": [
+        {
+          "value": "alice@example.com"
+        }
+      ]
+    },
+    {
+      "version": "4.0",
+      "fn": "Bob Brown",
+      "emails": [
+        {
+          "value": "bob@example.com"
+        }
+      ]
+    },
+    {
+      "version": "4.0",
+      "fn": "Carol Clark",
+      "emails": [
+        {
+          "value": "carol@example.com"
+        }
+      ]
+    }
+  ]
+}

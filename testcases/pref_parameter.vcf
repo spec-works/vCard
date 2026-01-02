@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Preference Parameter Test
+TEL;TYPE=work;PREF=1:+1-555-1111
+TEL;TYPE=work;PREF=2:+1-555-2222
+TEL;TYPE=home;PREF=3:+1-555-3333
+EMAIL;PREF=1:primary@example.com
+EMAIL;PREF=2:secondary@example.com
+END:VCARD

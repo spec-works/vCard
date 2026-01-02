@@ -1,0 +1,34 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Parameter Test",
+      "telephones": [
+        {
+          "value": "+1-555-1234",
+          "types": ["work,voice"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "test@example.com",
+          "types": ["work"],
+          "pref": "1"
+        }
+      ],
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "123 Main St",
+          "locality": "City",
+          "region": "ST",
+          "postalcode": "12345",
+          "country": "USA",
+          "types": ["home", "postal"],
+          "label": "123 Main St\nApt 4\nCity, ST 12345"
+        }
+      ]
+    }
+  ]
+}

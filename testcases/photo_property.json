@@ -1,0 +1,17 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Photo Property Test",
+      "photos": [
+        {
+          "value": "https://example.com/photos/johndoe.jpg"
+        },
+        {
+          "value": "https://example.com/avatar.jpg",
+          "mediatype": "image/jpeg"
+        }
+      ]
+    }
+  ]
+}

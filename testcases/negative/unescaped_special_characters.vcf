@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+NOTE:This has a newline
+that is not escaped
+ORG:Company;Department
+END:VCARD

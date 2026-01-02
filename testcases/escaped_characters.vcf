@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Test Escaping
+NOTE:Line 1\nLine 2\nLine 3
+NOTE:Semicolon test\; comma test\, backslash test\\
+NOTE:Combined: newline\n semicolon\; comma\, backslash\\
+ORG:Company\, Inc.;Department\; Division
+END:VCARD

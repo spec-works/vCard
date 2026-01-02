@@ -1,0 +1,19 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Categories Test",
+      "categories": [
+        {
+          "value": "Work,Technology,VIP"
+        },
+        {
+          "value": "Friends,Personal"
+        },
+        {
+          "value": "Conference,2024,Speaker"
+        }
+      ]
+    }
+  ]
+}

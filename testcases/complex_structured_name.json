@@ -1,0 +1,26 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Dr. John Michael David Smith Jr.",
+      "n": {
+        "family": "Smith",
+        "given": "John",
+        "additional": "Michael David",
+        "prefix": "Dr.",
+        "suffix": "Jr."
+      }
+    },
+    {
+      "version": "4.0",
+      "fn": "Ms. Mary Ann Elizabeth Jones-Brown PhD",
+      "n": {
+        "family": "Jones-Brown",
+        "given": "Mary",
+        "additional": "Ann Elizabeth",
+        "prefix": "Ms.",
+        "suffix": "PhD"
+      }
+    }
+  ]
+}

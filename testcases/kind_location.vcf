@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+KIND:location
+FN:Conference Room A
+ADR:;;Building 1, 3rd Floor;San Jose;CA;95110;USA
+GEO:geo:37.3861,-122.0839
+TEL;TYPE=voice:+1-555-100-3001
+END:VCARD

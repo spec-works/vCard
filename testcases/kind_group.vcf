@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+KIND:group
+FN:Development Team
+MEMBER:mailto:alice@example.com
+MEMBER:mailto:bob@example.com
+MEMBER:mailto:carol@example.com
+EMAIL:dev-team@example.com
+END:VCARD

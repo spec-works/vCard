@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Photo Property Test
+PHOTO:https://example.com/photos/johndoe.jpg
+PHOTO;MEDIATYPE=image/jpeg:https://example.com/avatar.jpg
+END:VCARD

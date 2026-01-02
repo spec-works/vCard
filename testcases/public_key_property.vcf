@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Public Key Test
+KEY:https://example.com/keys/john-doe.pgp
+KEY;MEDIATYPE=application/pgp-keys:https://keyserver.example.com/key/12345
+END:VCARD

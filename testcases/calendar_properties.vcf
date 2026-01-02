@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Calendar Properties Test
+FBURL:https://example.com/busy/janedoe
+CALADRURI:mailto:janedoe@example.com
+CALURI:https://example.com/calendar/janedoe
+END:VCARD

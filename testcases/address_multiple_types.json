@@ -1,0 +1,60 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Address Type Test",
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "100 Main St",
+          "locality": "Anytown",
+          "region": "ST",
+          "postalcode": "12345",
+          "country": "USA",
+          "types": ["work", "postal"]
+        },
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "200 Oak Ave",
+          "locality": "Hometown",
+          "region": "ST",
+          "postalcode": "67890",
+          "country": "USA",
+          "types": ["home", "postal"]
+        },
+        {
+          "pobox": "PO Box 123",
+          "extended": "",
+          "street": "300 Business Blvd",
+          "locality": "Worktown",
+          "region": "ST",
+          "postalcode": "11111",
+          "country": "USA",
+          "types": ["work", "parcel"]
+        },
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "400 Home Rd",
+          "locality": "Localtown",
+          "region": "ST",
+          "postalcode": "22222",
+          "country": "USA",
+          "types": ["home", "dom"]
+        },
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "500 Global Way",
+          "locality": "International City",
+          "region": "",
+          "postalcode": "IC001",
+          "country": "Foreign Country",
+          "types": ["work", "intl"]
+        }
+      ]
+    }
+  ]
+}

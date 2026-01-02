@@ -1,0 +1,16 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Robert Michael Johnson",
+      "n": {
+        "family": "Johnson",
+        "given": "Robert",
+        "additional": "Michael",
+        "prefix": "",
+        "suffix": ""
+      },
+      "nickname": "Bob,Bobby,Rob,Robbie"
+    }
+  ]
+}

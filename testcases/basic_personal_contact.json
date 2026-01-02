@@ -1,0 +1,28 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Jane Smith",
+      "n": {
+        "family": "Smith",
+        "given": "Jane",
+        "additional": "Marie",
+        "prefix": "Ms.",
+        "suffix": ""
+      },
+      "telephones": [
+        {
+          "value": "+1-555-123-4567",
+          "types": ["home"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "jane.smith@email.com",
+          "types": ["home"]
+        }
+      ],
+      "bday": "19900515"
+    }
+  ]
+}

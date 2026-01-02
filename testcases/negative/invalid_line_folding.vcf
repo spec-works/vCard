@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+NOTE:This is a very long note that should be folded but
+is not properly indented on the continuation line
+END:VCARD

@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:José María García
+N:García;José;María;;
+NICKNAME:Pepe
+ORG:Empresa Española S.A.
+TITLE:Ingeniero de Software
+NOTE:Caracteres especiales: ñ á é í ó ú ü ¿ ¡
+NOTE:Chinese: 王秀英
+NOTE:Japanese: 田中太郎
+NOTE:Arabic: محمد أحمد
+NOTE:Emoji: 👋 📧 📱
+EMAIL:jose.garcia@empresa.es
+ADR;TYPE=work:;;Calle Principal 123;Madrid;;28001;España
+END:VCARD

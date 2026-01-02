@@ -1,0 +1,5 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+invalid..group.TEL:+1-555-1234
+END:VCARD

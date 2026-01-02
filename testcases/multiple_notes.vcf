@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Multiple Notes Test
+NOTE:First note about this contact.
+NOTE:Second note with additional information.
+NOTE:Third note with even more details.
+NOTE:Meeting scheduled for next Tuesday.
+END:VCARD

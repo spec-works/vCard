@@ -1,0 +1,28 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:John Michael Doe
+N:Doe;John;Michael;Mr.;Jr.
+NICKNAME:Johnny
+BDAY:19850415
+ANNIVERSARY:20100612
+GENDER:M
+TEL;TYPE=work,voice;VALUE=uri:tel:+1-555-555-1234
+TEL;TYPE=home:555-555-5678
+TEL;TYPE=cell:555-555-9999
+EMAIL;TYPE=work:john.doe@example.com
+EMAIL;TYPE=home:johnny@home.com
+ADR;TYPE=work:;;123 Main Street;Springfield;IL;62701;USA
+ADR;TYPE=home:;;456 Oak Avenue;Springfield;IL;62702;USA
+ORG:ABC Corporation;Engineering Department
+TITLE:Senior Software Engineer
+ROLE:Developer
+GEO:geo:39.7817,-89.6501
+TZ:-06:00
+URL;TYPE=work:https://www.abccorp.com/employees/jdoe
+URL:https://johndoe.com
+NOTE:Important client contact. Prefers email communication.
+CATEGORIES:Work,VIP,Friends
+UID:urn:uuid:4fbe8971-0bc3-424c-9c26-36c3e1eff6b1
+REV:20240102T120000Z
+PRODID:-//VCard.Net//VCard 1.0//EN
+END:VCARD

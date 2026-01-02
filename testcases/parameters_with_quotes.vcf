@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Parameter Test
+TEL;TYPE="work,voice":+1-555-1234
+EMAIL;TYPE="work";PREF=1:test@example.com
+ADR;TYPE="home,postal";LABEL="123 Main St\nApt 4\nCity, ST 12345":;;123 Main St;City;ST;12345;USA
+END:VCARD

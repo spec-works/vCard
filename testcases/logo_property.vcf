@@ -1,0 +1,7 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Logo Property Test
+ORG:Acme Corporation
+LOGO:https://example.com/logos/acme-logo.png
+LOGO;MEDIATYPE=image/png:https://cdn.example.com/company-logo.png
+END:VCARD

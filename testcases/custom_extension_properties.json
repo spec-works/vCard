@@ -1,0 +1,18 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Custom Properties Test",
+      "extensions": {
+        "X-TWITTER": "@username",
+        "X-LINKEDIN": "linkedin.com/in/username",
+        "X-GITHUB": "github.com/username",
+        "X-CUSTOM-ID": "12345-ABCDE",
+        "X-DEPARTMENT": "Engineering",
+        "X-EMPLOYEE-NUMBER": "EMP-001",
+        "X-MANAGER": "Jane Doe",
+        "X-OFFICE-LOCATION": "Building A, Floor 3, Room 301"
+      }
+    }
+  ]
+}

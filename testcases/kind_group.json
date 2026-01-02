@@ -1,0 +1,19 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "kind": "group",
+      "fn": "Development Team",
+      "members": [
+        "mailto:alice@example.com",
+        "mailto:bob@example.com",
+        "mailto:carol@example.com"
+      ],
+      "emails": [
+        {
+          "value": "dev-team@example.com"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Logo Property Test",
+      "org": "Acme Corporation",
+      "logos": [
+        {
+          "value": "https://example.com/logos/acme-logo.png"
+        },
+        {
+          "value": "https://cdn.example.com/company-logo.png",
+          "mediatype": "image/png"
+        }
+      ]
+    }
+  ]
+}

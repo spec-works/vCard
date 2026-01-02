@@ -1,0 +1,10 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Property Group Test
+item1.TEL;TYPE=work:+1-555-1111
+item1.X-ABLABEL:Main Office
+item2.TEL;TYPE=home:+1-555-2222
+item2.X-ABLABEL:Personal
+item3.EMAIL;TYPE=work:work@example.com
+item3.X-ABLABEL:Work Email
+END:VCARD

@@ -1,0 +1,26 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "ClientPidMap Test",
+      "clientpidmap": [
+        {
+          "sourceid": "1",
+          "uri": "urn:uuid:53e374d9-337e-4727-8803-a1e9c14e0556"
+        }
+      ],
+      "telephones": [
+        {
+          "value": "+1-555-1234",
+          "pid": "1.1"
+        }
+      ],
+      "emails": [
+        {
+          "value": "test@example.com",
+          "pid": "1.2"
+        }
+      ]
+    }
+  ]
+}

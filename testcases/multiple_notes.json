@@ -1,0 +1,22 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Multiple Notes Test",
+      "notes": [
+        {
+          "value": "First note about this contact."
+        },
+        {
+          "value": "Second note with additional information."
+        },
+        {
+          "value": "Third note with even more details."
+        },
+        {
+          "value": "Meeting scheduled for next Tuesday."
+        }
+      ]
+    }
+  ]
+}

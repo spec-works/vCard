@@ -1,0 +1,27 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "kind": "location",
+      "fn": "Conference Room A",
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "Building 1, 3rd Floor",
+          "locality": "San Jose",
+          "region": "CA",
+          "postalcode": "95110",
+          "country": "USA"
+        }
+      ],
+      "geo": "geo:37.3861,-122.0839",
+      "telephones": [
+        {
+          "value": "+1-555-100-3001",
+          "types": ["voice"]
+        }
+      ]
+    }
+  ]
+}

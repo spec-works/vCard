@@ -1,0 +1,34 @@
+{
+  "linkset": [
+    {
+      "href": "https://www.rfc-editor.org/rfc/rfc6350.html",
+      "type": "text/html",
+      "rel": "describedby",
+      "title": "vCard Format Specification"
+    },
+    {
+      "href": "https://datatracker.ietf.org/doc/rfc9554/",
+      "type": "text/html",
+      "rel": "describedby",
+      "title": "vCard Format Extensions for JSContact"
+    },
+    {
+      "href": "https://www.rfc-editor.org/rfc/rfc6868.html",
+      "type": "text/html",
+      "rel": "describedby",
+      "title": "Parameter Value Encoding in iCalendar and vCard"
+    },
+    {
+      "href": "https://www.iana.org/assignments/vcard-elements/vcard-elements.xhtml",
+      "type": "text/html",
+      "rel": "related",
+      "title": "IANA vCard Elements Registry"
+    },
+    {
+      "href": "https://www.iana.org/assignments/media-types/text/vcard",
+      "type": "text/html",
+      "rel": "related",
+      "title": "IANA Media Type Registration for text/vcard"
+    }
+  ]
+}

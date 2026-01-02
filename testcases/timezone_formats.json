@@ -1,0 +1,24 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Timezone Test UTC Offset",
+      "tz": "-05:00"
+    },
+    {
+      "version": "4.0",
+      "fn": "Timezone Test Positive Offset",
+      "tz": "+09:00"
+    },
+    {
+      "version": "4.0",
+      "fn": "Timezone Test IANA",
+      "tz": "America/New_York"
+    },
+    {
+      "version": "4.0",
+      "fn": "Timezone Test Europe",
+      "tz": "Europe/London"
+    }
+  ]
+}

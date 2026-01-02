@@ -1,0 +1,20 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Test Escaping",
+      "notes": [
+        {
+          "value": "Line 1\nLine 2\nLine 3"
+        },
+        {
+          "value": "Semicolon test; comma test, backslash test\\"
+        },
+        {
+          "value": "Combined: newline\n semicolon; comma, backslash\\"
+        }
+      ],
+      "org": "Company, Inc.;Department; Division"
+    }
+  ]
+}

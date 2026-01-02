@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Email Type Test
+EMAIL;TYPE=work,internet:work@example.com
+EMAIL;TYPE=home,internet:home@example.com
+EMAIL;TYPE=work:work-only@example.com
+EMAIL;TYPE=internet:internet@example.com
+END:VCARD

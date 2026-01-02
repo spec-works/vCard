@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Address Type Test
+ADR;TYPE=work,postal:;;100 Main St;Anytown;ST;12345;USA
+ADR;TYPE=home,postal:;;200 Oak Ave;Hometown;ST;67890;USA
+ADR;TYPE=work,parcel:PO Box 123;;300 Business Blvd;Worktown;ST;11111;USA
+ADR;TYPE=home,dom:;;400 Home Rd;Localtown;ST;22222;USA
+ADR;TYPE=work,intl:;;500 Global Way;International City;;IC001;Foreign Country
+END:VCARD

@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Related Entity Test
+RELATED;TYPE=spouse:Jane Doe
+RELATED;TYPE=child:John Doe Jr.
+RELATED;TYPE=colleague:Bob Smith
+RELATED;TYPE=friend:Alice Johnson
+RELATED;TYPE=parent:Mary Doe
+END:VCARD

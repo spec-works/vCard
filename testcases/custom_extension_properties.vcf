@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Custom Properties Test
+X-TWITTER:@username
+X-LINKEDIN:linkedin.com/in/username
+X-GITHUB:github.com/username
+X-CUSTOM-ID:12345-ABCDE
+X-DEPARTMENT:Engineering
+X-EMPLOYEE-NUMBER:EMP-001
+X-MANAGER:Jane Doe
+X-OFFICE-LOCATION:Building A, Floor 3, Room 301
+END:VCARD

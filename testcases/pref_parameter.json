@@ -1,0 +1,35 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Preference Parameter Test",
+      "telephones": [
+        {
+          "value": "+1-555-1111",
+          "types": ["work"],
+          "pref": "1"
+        },
+        {
+          "value": "+1-555-2222",
+          "types": ["work"],
+          "pref": "2"
+        },
+        {
+          "value": "+1-555-3333",
+          "types": ["home"],
+          "pref": "3"
+        }
+      ],
+      "emails": [
+        {
+          "value": "primary@example.com",
+          "pref": "1"
+        },
+        {
+          "value": "secondary@example.com",
+          "pref": "2"
+        }
+      ]
+    }
+  ]
+}

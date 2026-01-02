@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Jane Smith
+N:Smith;Jane;Marie;Ms.;
+TEL;TYPE=home:+1-555-123-4567
+EMAIL;TYPE=home:jane.smith@email.com
+BDAY:19900515
+END:VCARD

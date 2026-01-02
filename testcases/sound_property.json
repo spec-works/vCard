@@ -1,0 +1,17 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Sound Property Test",
+      "sounds": [
+        {
+          "value": "https://example.com/sounds/pronunciation.mp3"
+        },
+        {
+          "value": "https://example.com/name-pronunciation.mp3",
+          "mediatype": "audio/mpeg"
+        }
+      ]
+    }
+  ]
+}

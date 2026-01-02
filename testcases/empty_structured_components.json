@@ -1,0 +1,42 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Single Name Person",
+      "n": {
+        "family": "SingleName",
+        "given": "",
+        "additional": "",
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "version": "4.0",
+      "fn": "No Last Name",
+      "n": {
+        "family": "",
+        "given": "FirstOnly",
+        "additional": "",
+        "prefix": "",
+        "suffix": ""
+      }
+    },
+    {
+      "version": "4.0",
+      "fn": "Address with Empty Components",
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "123 Main St",
+          "locality": "",
+          "region": "CA",
+          "postalcode": "90210",
+          "country": "",
+          "types": ["home"]
+        }
+      ]
+    }
+  ]
+}

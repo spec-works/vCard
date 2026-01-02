@@ -1,0 +1,47 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Maria Garcia",
+      "n": {
+        "family": "Garcia",
+        "given": "Maria",
+        "additional": "Elena",
+        "prefix": "",
+        "suffix": ""
+      },
+      "telephones": [
+        {
+          "value": "+1-555-111-1111",
+          "types": ["home", "voice"]
+        },
+        {
+          "value": "+1-555-222-2222",
+          "types": ["work", "voice"]
+        },
+        {
+          "value": "+1-555-333-3333",
+          "types": ["cell"]
+        },
+        {
+          "value": "+1-555-444-4444",
+          "types": ["fax"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "maria@home.com",
+          "types": ["home"]
+        },
+        {
+          "value": "maria.garcia@company.com",
+          "types": ["work"]
+        },
+        {
+          "value": "m.garcia@company.com",
+          "types": ["work"]
+        }
+      ]
+    }
+  ]
+}

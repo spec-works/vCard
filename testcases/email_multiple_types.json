@@ -1,0 +1,26 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Email Type Test",
+      "emails": [
+        {
+          "value": "work@example.com",
+          "types": ["work", "internet"]
+        },
+        {
+          "value": "home@example.com",
+          "types": ["home", "internet"]
+        },
+        {
+          "value": "work-only@example.com",
+          "types": ["work"]
+        },
+        {
+          "value": "internet@example.com",
+          "types": ["internet"]
+        }
+      ]
+    }
+  ]
+}

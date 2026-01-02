@@ -1,0 +1,18 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Whitespace Test",
+      "telephones": [
+        {
+          "value": "+1-555-1234"
+        }
+      ],
+      "emails": [
+        {
+          "value": "test@example.com"
+        }
+      ]
+    }
+  ]
+}

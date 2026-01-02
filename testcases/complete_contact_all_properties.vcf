@@ -1,0 +1,28 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Alexander James Thompson
+N:Thompson;Alexander;James;Mr.;Jr.
+NICKNAME:Alex
+GENDER:M
+BDAY:19850415
+ANNIVERSARY:20100612
+ORG:Tech Innovations Inc.;Engineering Department
+TITLE:Chief Technology Officer
+ROLE:Executive
+TEL;TYPE=work,voice:+1-555-100-2000
+TEL;TYPE=home:+1-555-100-2001
+TEL;TYPE=cell:+1-555-100-2002
+EMAIL;TYPE=work:alex.thompson@techinnovations.com
+EMAIL;TYPE=home:alex@home.net
+ADR;TYPE=work:Suite 500;Building A;999 Silicon Valley Blvd;San Jose;CA;95110;USA
+ADR;TYPE=home:;;123 Residential Lane;Palo Alto;CA;94301;USA
+GEO:geo:37.3861,-122.0839
+TZ:-08:00
+URL:https://www.techinnovations.com
+URL;TYPE=home:https://alexthompson.com
+NOTE:Important client contact. Available Mon-Fri 9am-5pm PST.
+CATEGORIES:VIP,Technology,Executive
+UID:urn:uuid:4fbe8971-0bc3-424c-9c26-36c3e1eff6b1
+REV:20231201T120000Z
+PRODID:-//Tech Innovations Inc.//Contact Manager v1.0//EN
+END:VCARD

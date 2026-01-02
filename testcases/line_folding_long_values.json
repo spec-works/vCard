@@ -1,0 +1,18 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "William Shakespeare",
+      "notes": [
+        {
+          "value": "This is a very long note that contains more than seventy-five characters and therefore must be folded according to RFC 6350 specifications for proper vCard formatting. The line folding mechanism uses a CRLF followed by a single space or tab character to indicate continuation."
+        }
+      ],
+      "urls": [
+        {
+          "value": "https://www.example.com/very/long/path/that/exceeds/the/maximum/line/length/of/seventy/five/characters/and/needs/to/be/folded/properly"
+        }
+      ]
+    }
+  ]
+}

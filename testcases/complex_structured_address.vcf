@@ -1,0 +1,6 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Complex Address Test
+ADR;TYPE=work:PO Box 1234;Suite 500;1000 Corporate Boulevard;Metropolis;NY;10001;United States of America
+ADR;TYPE=home:;Apartment 3B;456 Residential Street;Smalltown;CA;90210;USA
+END:VCARD

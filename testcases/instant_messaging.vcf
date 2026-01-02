@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Instant Messaging Test
+IMPP;TYPE=home:xmpp:alice@example.com
+IMPP;TYPE=work:sip:bob@example.com
+IMPP:skype:username
+IMPP:aim:screenname
+END:VCARD

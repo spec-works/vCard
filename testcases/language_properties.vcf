@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Language Test
+LANG;TYPE=work;PREF=1:en
+LANG;TYPE=work;PREF=2:fr
+LANG;TYPE=home:es
+LANG:zh
+END:VCARD

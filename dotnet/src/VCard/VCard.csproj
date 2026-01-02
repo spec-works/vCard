@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net10.0;netstandard2.1</TargetFrameworks>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>latest</LangVersion>
+
+    <!-- NuGet Package Properties -->
+    <PackageId>VCard.Net</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>VCard Parser Team</Authors>
+    <Company>VCard.Net</Company>
+    <Product>VCard.Net</Product>
+    <Description>A complete .NET library for parsing, validating, and serializing vCard (text/vcard) data according to RFC 6350. Includes a full Document Object Model (DOM) for all vCard properties including FN, N, TEL, EMAIL, ADR, and more.</Description>
+    <PackageTags>vcard;contact;parser;serializer;validator;rfc6350;vcf</PackageTags>
+    <PackageProjectUrl>https://github.com/yourusername/vcard-net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yourusername/vcard-net</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release with full RFC 6350 support for parsing, validation, and serialization.</PackageReleaseNotes>
+    <Copyright>Copyright (c) 2023-2024</Copyright>
+
+    <!-- Strong Naming -->
+    <AssemblyName>VCard</AssemblyName>
+    <RootNamespace>VCard</RootNamespace>
+
+    <!-- Source Link Support -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>

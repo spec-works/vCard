@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Alice Anderson
+EMAIL:alice@example.com
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN:Bob Brown
+EMAIL:bob@example.com
+END:VCARD
+BEGIN:VCARD
+VERSION:4.0
+FN:Carol Clark
+EMAIL:carol@example.com
+END:VCARD

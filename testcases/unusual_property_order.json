@@ -1,0 +1,25 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Order Test",
+      "n": {
+        "family": "Test",
+        "given": "Order",
+        "additional": "",
+        "prefix": "",
+        "suffix": ""
+      },
+      "emails": [
+        {
+          "value": "test@example.com"
+        }
+      ],
+      "telephones": [
+        {
+          "value": "+1-555-1234"
+        }
+      ]
+    }
+  ]
+}

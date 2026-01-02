@@ -1,0 +1,34 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Date Format Test 1",
+      "bday": "19850415"
+    },
+    {
+      "version": "4.0",
+      "fn": "Date Format Test 2",
+      "bday": "1985-04-15"
+    },
+    {
+      "version": "4.0",
+      "fn": "Date Format Test 3",
+      "bday": "--0415"
+    },
+    {
+      "version": "4.0",
+      "fn": "Date Format Test 4",
+      "bday": "1985"
+    },
+    {
+      "version": "4.0",
+      "fn": "Date Format Test 5",
+      "bday": "1985-04"
+    },
+    {
+      "version": "4.0",
+      "fn": "DateTime Format Test",
+      "bday": "19850415T141500Z"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Multiple URLs Test
+URL;TYPE=work:https://www.company.com
+URL;TYPE=home:https://personal-blog.com
+URL:https://github.com/username
+URL:https://linkedin.com/in/username
+URL:https://twitter.com/username
+END:VCARD

@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Robert Johnson
+N:Johnson;Robert;Alan;Dr.;PhD
+ORG:Acme Corporation;Research and Development
+TITLE:Senior Software Engineer
+ROLE:Project Lead
+TEL;TYPE=work,voice:+1-555-987-6543
+TEL;TYPE=work,cell:+1-555-987-6544
+EMAIL;TYPE=work:robert.johnson@acme.com
+ADR;TYPE=work:;;1234 Enterprise Way;Springfield;IL;62701;USA
+URL:https://www.acme.com/employees/rjohnson
+END:VCARD

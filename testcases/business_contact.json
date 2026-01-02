@@ -1,0 +1,51 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Robert Johnson",
+      "n": {
+        "family": "Johnson",
+        "given": "Robert",
+        "additional": "Alan",
+        "prefix": "Dr.",
+        "suffix": "PhD"
+      },
+      "org": "Acme Corporation;Research and Development",
+      "title": "Senior Software Engineer",
+      "role": "Project Lead",
+      "telephones": [
+        {
+          "value": "+1-555-987-6543",
+          "types": ["work", "voice"]
+        },
+        {
+          "value": "+1-555-987-6544",
+          "types": ["work", "cell"]
+        }
+      ],
+      "emails": [
+        {
+          "value": "robert.johnson@acme.com",
+          "types": ["work"]
+        }
+      ],
+      "addresses": [
+        {
+          "pobox": "",
+          "extended": "",
+          "street": "1234 Enterprise Way",
+          "locality": "Springfield",
+          "region": "IL",
+          "postalcode": "62701",
+          "country": "USA",
+          "types": ["work"]
+        }
+      ],
+      "urls": [
+        {
+          "value": "https://www.acme.com/employees/rjohnson"
+        }
+      ]
+    }
+  ]
+}

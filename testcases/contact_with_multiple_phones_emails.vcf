@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Maria Garcia
+N:Garcia;Maria;Elena;;
+TEL;TYPE=home,voice:+1-555-111-1111
+TEL;TYPE=work,voice:+1-555-222-2222
+TEL;TYPE=cell:+1-555-333-3333
+TEL;TYPE=fax:+1-555-444-4444
+EMAIL;TYPE=home:maria@home.com
+EMAIL;TYPE=work:maria.garcia@company.com
+EMAIL;TYPE=work:m.garcia@company.com
+END:VCARD

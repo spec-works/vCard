@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:4.0
+FN:Whitespace Test
+
+TEL:+1-555-1234
+
+EMAIL:test@example.com
+
+END:VCARD

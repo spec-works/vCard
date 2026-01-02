@@ -1,0 +1,30 @@
+{
+  "vcards": [
+    {
+      "version": "4.0",
+      "fn": "Related Entity Test",
+      "related": [
+        {
+          "value": "Jane Doe",
+          "types": ["spouse"]
+        },
+        {
+          "value": "John Doe Jr.",
+          "types": ["child"]
+        },
+        {
+          "value": "Bob Smith",
+          "types": ["colleague"]
+        },
+        {
+          "value": "Alice Johnson",
+          "types": ["friend"]
+        },
+        {
+          "value": "Mary Doe",
+          "types": ["parent"]
+        }
+      ]
+    }
+  ]
+}
