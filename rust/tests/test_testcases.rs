@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::fs;
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use vcard::VCardParser;
 
 #[derive(Debug, Deserialize, Serialize)]
