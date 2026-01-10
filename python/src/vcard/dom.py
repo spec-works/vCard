@@ -103,25 +103,108 @@ class VCardObject(VCardComponent):
         prop = self.get_property("NICKNAME")
         return prop.value if prop else None
 
+    @nickname.setter
+    def nickname(self, value: str):
+        self.add_property(VCardProperty("NICKNAME", value))
+
     @property
     def photo(self) -> Optional[str]:
         prop = self.get_property("PHOTO")
         return prop.value if prop else None
+
+    @photo.setter
+    def photo(self, value: str):
+        self.add_property(VCardProperty("PHOTO", value))
 
     @property
     def birthday(self) -> Optional[str]:
         prop = self.get_property("BDAY")
         return prop.value if prop else None
 
+    @birthday.setter
+    def birthday(self, value: str):
+        self.add_property(VCardProperty("BDAY", value))
+
+    @property
+    def anniversary(self) -> Optional[str]:
+        prop = self.get_property("ANNIVERSARY")
+        return prop.value if prop else None
+
+    @anniversary.setter
+    def anniversary(self, value: str):
+        self.add_property(VCardProperty("ANNIVERSARY", value))
+
+    @property
+    def gender(self) -> Optional[str]:
+        prop = self.get_property("GENDER")
+        return prop.value if prop else None
+
+    @gender.setter
+    def gender(self, value: str):
+        self.add_property(VCardProperty("GENDER", value))
+
     @property
     def organization(self) -> Optional[str]:
         prop = self.get_property("ORG")
         return prop.value if prop else None
 
+    @organization.setter
+    def organization(self, value: str):
+        self.add_property(VCardProperty("ORG", value))
+
     @property
     def title(self) -> Optional[str]:
         prop = self.get_property("TITLE")
         return prop.value if prop else None
+
+    @title.setter
+    def title(self, value: str):
+        self.add_property(VCardProperty("TITLE", value))
+
+    @property
+    def role(self) -> Optional[str]:
+        prop = self.get_property("ROLE")
+        return prop.value if prop else None
+
+    @role.setter
+    def role(self, value: str):
+        self.add_property(VCardProperty("ROLE", value))
+
+    @property
+    def uid(self) -> Optional[str]:
+        prop = self.get_property("UID")
+        return prop.value if prop else None
+
+    @uid.setter
+    def uid(self, value: str):
+        self.add_property(VCardProperty("UID", value))
+
+    @property
+    def revision(self) -> Optional[str]:
+        prop = self.get_property("REV")
+        return prop.value if prop else None
+
+    @revision.setter
+    def revision(self, value: str):
+        self.add_property(VCardProperty("REV", value))
+
+    @property
+    def time_zone(self) -> Optional[str]:
+        prop = self.get_property("TZ")
+        return prop.value if prop else None
+
+    @time_zone.setter
+    def time_zone(self, value: str):
+        self.add_property(VCardProperty("TZ", value))
+
+    @property
+    def geo(self) -> Optional[str]:
+        prop = self.get_property("GEO")
+        return prop.value if prop else None
+
+    @geo.setter
+    def geo(self, value: str):
+        self.add_property(VCardProperty("GEO", value))
 
     # Communication properties
     @property

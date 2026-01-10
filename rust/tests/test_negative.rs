@@ -1,5 +1,5 @@
 use std::fs;
-use std::path::{Path, PathBuf};
+use std::path::PathBuf;
 use vcard::VCardParser;
 
 fn get_negative_testcases_dir() -> PathBuf {

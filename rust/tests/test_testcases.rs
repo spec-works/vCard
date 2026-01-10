@@ -1,8 +1,7 @@
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
 use std::fs;
-use std::path::{Path, PathBuf};
-use vcard::{VCardObject, VCardParser, VCardProperty};
+use std::path::PathBuf;
+use vcard::VCardParser;
 
 #[derive(Debug, Deserialize, Serialize)]
 struct VCardTestCaseData {

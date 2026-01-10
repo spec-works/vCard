@@ -20,7 +20,7 @@ namespace VCard
             Properties[property.Name].Add(property);
         }
 
-        public VCardProperty GetProperty(string name)
+        public VCardProperty? GetProperty(string name)
         {
             return Properties.ContainsKey(name) ? Properties[name].FirstOrDefault() : null;
         }
@@ -57,7 +57,7 @@ namespace VCard
             Parameters[paramName].Add(paramValue);
         }
 
-        public string GetParameter(string paramName)
+        public string? GetParameter(string paramName)
         {
             return Parameters.ContainsKey(paramName) ? Parameters[paramName].FirstOrDefault() : null;
         }
@@ -76,50 +76,50 @@ namespace VCard
         public override string ComponentType => "VCARD";
 
         // Required properties
-        public string Version
+        public string? Version
         {
             get => GetProperty("VERSION")?.Value;
             set => AddProperty(new VCardProperty("VERSION", value));
         }
 
-        public string FormattedName
+        public string? FormattedName
         {
             get => GetProperty("FN")?.Value;
             set => AddProperty(new VCardProperty("FN", value));
         }
 
         // Identification properties
-        public string Name
+        public string? Name
         {
             get => GetProperty("N")?.Value;
             set => AddProperty(new VCardProperty("N", value));
         }
 
-        public string Nickname
+        public string? Nickname
         {
             get => GetProperty("NICKNAME")?.Value;
             set => AddProperty(new VCardProperty("NICKNAME", value));
         }
 
-        public string Photo
+        public string? Photo
         {
             get => GetProperty("PHOTO")?.Value;
             set => AddProperty(new VCardProperty("PHOTO", value));
         }
 
-        public string Birthday
+        public string? Birthday
         {
             get => GetProperty("BDAY")?.Value;
             set => AddProperty(new VCardProperty("BDAY", value));
         }
 
-        public string Anniversary
+        public string? Anniversary
         {
             get => GetProperty("ANNIVERSARY")?.Value;
             set => AddProperty(new VCardProperty("ANNIVERSARY", value));
         }
 
-        public string Gender
+        public string? Gender
         {
             get => GetProperty("GENDER")?.Value;
             set => AddProperty(new VCardProperty("GENDER", value));
@@ -162,38 +162,38 @@ namespace VCard
         public List<VCardProperty> Languages => GetProperties("LANG");
 
         // Geographical properties
-        public string TimeZone
+        public string? TimeZone
         {
             get => GetProperty("TZ")?.Value;
             set => AddProperty(new VCardProperty("TZ", value));
         }
 
-        public string Geo
+        public string? Geo
         {
             get => GetProperty("GEO")?.Value;
             set => AddProperty(new VCardProperty("GEO", value));
         }
 
         // Organizational properties
-        public string Title
+        public string? Title
         {
             get => GetProperty("TITLE")?.Value;
             set => AddProperty(new VCardProperty("TITLE", value));
         }
 
-        public string Role
+        public string? Role
         {
             get => GetProperty("ROLE")?.Value;
             set => AddProperty(new VCardProperty("ROLE", value));
         }
 
-        public string Logo
+        public string? Logo
         {
             get => GetProperty("LOGO")?.Value;
             set => AddProperty(new VCardProperty("LOGO", value));
         }
 
-        public string Organization
+        public string? Organization
         {
             get => GetProperty("ORG")?.Value;
             set => AddProperty(new VCardProperty("ORG", value));
@@ -206,25 +206,25 @@ namespace VCard
         public List<VCardProperty> Categories => GetProperties("CATEGORIES");
         public List<VCardProperty> Notes => GetProperties("NOTE");
 
-        public string ProductId
+        public string? ProductId
         {
             get => GetProperty("PRODID")?.Value;
             set => AddProperty(new VCardProperty("PRODID", value));
         }
 
-        public string Revision
+        public string? Revision
         {
             get => GetProperty("REV")?.Value;
             set => AddProperty(new VCardProperty("REV", value));
         }
 
-        public string Sound
+        public string? Sound
         {
             get => GetProperty("SOUND")?.Value;
             set => AddProperty(new VCardProperty("SOUND", value));
         }
 
-        public string Uid
+        public string? Uid
         {
             get => GetProperty("UID")?.Value;
             set => AddProperty(new VCardProperty("UID", value));
@@ -236,7 +236,7 @@ namespace VCard
         public List<VCardProperty> Keys => GetProperties("KEY");
 
         // Security properties
-        public string Kind
+        public string? Kind
         {
             get => GetProperty("KIND")?.Value;
             set => AddProperty(new VCardProperty("KIND", value));
