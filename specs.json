@@ -29,6 +29,11 @@
       "type": "text/html",
       "rel": "related",
       "title": "IANA Media Type Registration for text/vcard"
+    },
+    {
+      "rel": "registry",
+      "title": "Part registry entry",
+      "href": "https://spec-works.github.io/registry/parts/vcard/"
     }
   ]
 }

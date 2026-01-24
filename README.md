@@ -1,4 +1,6 @@
 # vCard
+[![Registry](https://img.shields.io/badge/Registry-SpecWorks-blue)](https://spec-works.github.io/registry/parts/vcard/)
+
 
 Software component for parsing, validating, and serializing vCard data.
 
