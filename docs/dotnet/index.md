@@ -42,11 +42,15 @@ EMAIL:john.doe@example.com
 TEL;TYPE=work:+1-555-555-5555
 END:VCARD";
 
-VCard card = VCard.Parse(vcardText);
+var parser = new VCardParser();
+var vcards = parser.Parse(vcardText);
+var card = vcards[0];
 
 Console.WriteLine($"Name: {card.FormattedName}");
-Console.WriteLine($"Email: {card.Email}");
-Console.WriteLine($"Phone: {card.Telephone}");
+if (card.Emails.Count > 0)
+    Console.WriteLine($"Email: {card.Emails[0].Value}");
+if (card.Telephones.Count > 0)
+    Console.WriteLine($"Phone: {card.Telephones[0].Value}");
 ```
 
 ### Creating a vCard
@@ -54,17 +58,22 @@ Console.WriteLine($"Phone: {card.Telephone}");
 ```csharp
 using VCard;
 
-var card = new VCard
+var card = new VCardObject
 {
-    FormattedName = "Jane Smith",
-    GivenName = "Jane",
-    FamilyName = "Smith",
-    Email = "jane.smith@example.com",
-    Telephone = "+1-555-123-4567",
-    Organization = "Acme Corporation"
+    Version = "4.0",
+    FormattedName = "Jane Smith"
 };
 
-string vcardText = card.ToString();
+// Add properties
+card.Name = "Smith;Jane;;;";
+card.Organization = "Acme Corporation";
+
+// Add email and telephone
+card.Emails.Add(new Email { Value = "jane.smith@example.com" });
+card.Telephones.Add(new Telephone { Value = "+1-555-123-4567" });
+
+var serializer = new VCardSerializer();
+string vcardText = serializer.Serialize(card);
 Console.WriteLine(vcardText);
 ```
 
@@ -73,18 +82,35 @@ Console.WriteLine(vcardText);
 ```csharp
 using VCard;
 
-var card = new VCard
+var card = new VCardObject
 {
+    Version = "4.0",
     FormattedName = "John Doe"
 };
 
 // Add multiple email addresses
-card.AddEmail("work@example.com", type: "work");
-card.AddEmail("personal@example.com", type: "home");
+card.Emails.Add(new Email 
+{ 
+    Value = "work@example.com", 
+    Types = EmailType.Work 
+});
+card.Emails.Add(new Email 
+{ 
+    Value = "personal@example.com", 
+    Types = EmailType.Home 
+});
 
 // Add multiple phone numbers
-card.AddTelephone("+1-555-555-5555", type: "work");
-card.AddTelephone("+1-555-123-4567", type: "cell");
+card.Telephones.Add(new Telephone 
+{ 
+    Value = "+1-555-555-5555", 
+    Types = TelType.Work | TelType.Voice 
+});
+card.Telephones.Add(new Telephone 
+{ 
+    Value = "+1-555-123-4567", 
+    Types = TelType.Cell 
+});
 ```
 
 ## API Reference
