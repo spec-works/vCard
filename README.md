@@ -15,6 +15,7 @@ See [specs.json](specs.json) for complete specification references.
 - **[.NET Library](dotnet/README.md)** - ![.NET Test](https://github.com/spec-works/vCard/workflows/.NET%20Test/badge.svg)
 - **[Python Library](python/README.md)** - ![Python Test](https://github.com/spec-works/vCard/workflows/Python%20Test/badge.svg)
 - **[Rust Library](rust/README.md)** - ![Rust Test](https://github.com/spec-works/vCard/workflows/Rust%20Test/badge.svg)
+- **[TypeScript Library](typescript/README.md)** - ![TypeScript Test](https://github.com/spec-works/vCard/workflows/TypeScript%20Test/badge.svg)
 
 ## Test Cases
 
