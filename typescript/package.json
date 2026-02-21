@@ -1,0 +1,33 @@
+{
+  "name": "@specworks/vcard",
+  "version": "1.0.0",
+  "description": "Parse, validate, and serialize vCard data according to RFC 6350",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "vcard",
+    "vcf",
+    "rfc6350",
+    "parser",
+    "serializer",
+    "validator",
+    "contacts"
+  ],
+  "author": "spec-works",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spec-works/vCard.git",
+    "directory": "typescript"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}

@@ -43,6 +43,15 @@ Rust library for vCard 4.0 parsing and serialization.
 - **Rust Edition**: 2021
 - [View Rust Documentation →](rust/index.md)
 
+### [TypeScript](typescript/index.md)
+
+TypeScript library for vCard 4.0 parsing and serialization.
+
+- **Package**: [@specworks/vcard](https://www.npmjs.com/package/@specworks/vcard) on npm
+- **Node.js**: 18+
+- **Zero Dependencies**
+- [View TypeScript Documentation →](typescript/index.md)
+
 ## Quick Start
 
 ### .NET
@@ -107,6 +116,28 @@ let new_card = VCard::new()
     .formatted_name("John Doe")
     .email("john@example.com");
 let vcard_text = new_card.to_string();
+```
+
+### TypeScript
+
+```bash
+npm install @specworks/vcard
+```
+
+```typescript
+import { VCardParser, VCardObject, VCardSerializer, Telephone, TelType } from '@specworks/vcard';
+
+// Parse a vCard
+const parser = new VCardParser();
+const vcards = parser.parse(vcardText);
+console.log(`Name: ${vcards[0].formattedName}`);
+
+// Create a vCard
+const vcard = new VCardObject();
+vcard.version = '4.0';
+vcard.formattedName = 'John Doe';
+const serializer = new VCardSerializer();
+const text = serializer.serialize(vcard);
 ```
 
 ## Specification Compliance

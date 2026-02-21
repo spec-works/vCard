@@ -8,5 +8,7 @@
   href: python/toc.yml
 - name: Rust
   href: rust/toc.yml
+- name: TypeScript
+  href: typescript/toc.yml
 - name: GitHub
   href: https://github.com/spec-works/vCard
