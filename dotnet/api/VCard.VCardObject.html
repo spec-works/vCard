@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class VCardObject | vCard Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class VCardObject | vCard Documentation ">
+      
+      <meta name="description" content="Root vCard object (VCARD)">
+      <link rel="icon" href="../../images/logo.svg">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/spec-works/vCard/new/main/apiSpec/new?filename=VCard_VCardObject.md&amp;value=---%0Auid%3A%20VCard.VCardObject%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../images/logo.svg" alt="vCard">
+            vCard
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="VCard.VCardObject">
+
+
+
+  <h1 id="VCard_VCardObject" data-uid="VCard.VCardObject" class="text-break">
+Class VCardObject  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L74"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="VCard.html">VCard</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>VCard.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Root vCard object (VCARD)</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class VCardObject : VCardComponent</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><span class="xref">object</span></div>
+      <div><a class="xref" href="VCard.VCardComponent.html">VCardComponent</a></div>
+      <div><span class="xref">VCardObject</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="VCard.VCardComponent.html#VCard_VCardComponent_Properties">VCardComponent.Properties</a>
+    </div>
+    <div>
+      <a class="xref" href="VCard.VCardComponent.html#VCard_VCardComponent_AddProperty_VCard_VCardProperty_">VCardComponent.AddProperty(VCardProperty)</a>
+    </div>
+    <div>
+      <a class="xref" href="VCard.VCardComponent.html#VCard_VCardComponent_GetProperty_System_String_">VCardComponent.GetProperty(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="VCard.VCardComponent.html#VCard_VCardComponent_GetProperties_System_String_">VCardComponent.GetProperties(string)</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="VCard.VCardSerializerExtensions.html#VCard_VCardSerializerExtensions_SaveToFile_VCard_VCardObject_System_String_">VCardSerializerExtensions.SaveToFile(VCardObject, string)</a>
+  </div>
+  <div>
+      <a class="xref" href="VCard.VCardSerializerExtensions.html#VCard_VCardSerializerExtensions_ToVCard_VCard_VCardObject_">VCardSerializerExtensions.ToVCard(VCardObject)</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="VCard_VCardObject_Addresses_" data-uid="VCard.VCardObject.Addresses*"></a>
+
+  <h3 id="VCard_VCardObject_Addresses" data-uid="VCard.VCardObject.Addresses">
+  Addresses
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Postal addresses with type information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Address&gt; Addresses { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.Address.html">Address</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Anniversary_" data-uid="VCard.VCardObject.Anniversary*"></a>
+
+  <h3 id="VCard_VCardObject_Anniversary" data-uid="VCard.VCardObject.Anniversary">
+  Anniversary
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L116"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Anniversary { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Birthday_" data-uid="VCard.VCardObject.Birthday*"></a>
+
+  <h3 id="VCard_VCardObject_Birthday" data-uid="VCard.VCardObject.Birthday">
+  Birthday
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L110"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Birthday { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_CalAdrs_" data-uid="VCard.VCardObject.CalAdrs*"></a>
+
+  <h3 id="VCard_VCardObject_CalAdrs" data-uid="VCard.VCardObject.CalAdrs">
+  CalAdrs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; CalAdrs { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_CalUris_" data-uid="VCard.VCardObject.CalUris*"></a>
+
+  <h3 id="VCard_VCardObject_CalUris" data-uid="VCard.VCardObject.CalUris">
+  CalUris
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L248"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; CalUris { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Categories_" data-uid="VCard.VCardObject.Categories*"></a>
+
+  <h3 id="VCard_VCardObject_Categories" data-uid="VCard.VCardObject.Categories">
+  Categories
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L206"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Categories { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_ClientPidMaps_" data-uid="VCard.VCardObject.ClientPidMaps*"></a>
+
+  <h3 id="VCard_VCardObject_ClientPidMaps" data-uid="VCard.VCardObject.ClientPidMaps">
+  ClientPidMaps
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L233"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; ClientPidMaps { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_ComponentType_" data-uid="VCard.VCardObject.ComponentType*"></a>
+
+  <h3 id="VCard_VCardObject_ComponentType" data-uid="VCard.VCardObject.ComponentType">
+  ComponentType
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L76"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ComponentType { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Emails_" data-uid="VCard.VCardObject.Emails*"></a>
+
+  <h3 id="VCard_VCardObject_Emails" data-uid="VCard.VCardObject.Emails">
+  Emails
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L145"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Email addresses with type information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Email&gt; Emails { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.Email.html">Email</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_FbUrls_" data-uid="VCard.VCardObject.FbUrls*"></a>
+
+  <h3 id="VCard_VCardObject_FbUrls" data-uid="VCard.VCardObject.FbUrls">
+  FbUrls
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L246"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; FbUrls { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_FormattedName_" data-uid="VCard.VCardObject.FormattedName*"></a>
+
+  <h3 id="VCard_VCardObject_FormattedName" data-uid="VCard.VCardObject.FormattedName">
+  FormattedName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L85"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? FormattedName { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Gender_" data-uid="VCard.VCardObject.Gender*"></a>
+
+  <h3 id="VCard_VCardObject_Gender" data-uid="VCard.VCardObject.Gender">
+  Gender
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Gender { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Geo_" data-uid="VCard.VCardObject.Geo*"></a>
+
+  <h3 id="VCard_VCardObject_Geo" data-uid="VCard.VCardObject.Geo">
+  Geo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Geo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Impps_" data-uid="VCard.VCardObject.Impps*"></a>
+
+  <h3 id="VCard_VCardObject_Impps" data-uid="VCard.VCardObject.Impps">
+  Impps
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Impps { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Keys_" data-uid="VCard.VCardObject.Keys*"></a>
+
+  <h3 id="VCard_VCardObject_Keys" data-uid="VCard.VCardObject.Keys">
+  Keys
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L236"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Keys { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Kind_" data-uid="VCard.VCardObject.Kind*"></a>
+
+  <h3 id="VCard_VCardObject_Kind" data-uid="VCard.VCardObject.Kind">
+  Kind
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L239"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Kind { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Languages_" data-uid="VCard.VCardObject.Languages*"></a>
+
+  <h3 id="VCard_VCardObject_Languages" data-uid="VCard.VCardObject.Languages">
+  Languages
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Languages { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Logo_" data-uid="VCard.VCardObject.Logo*"></a>
+
+  <h3 id="VCard_VCardObject_Logo" data-uid="VCard.VCardObject.Logo">
+  Logo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Logo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Members_" data-uid="VCard.VCardObject.Members*"></a>
+
+  <h3 id="VCard_VCardObject_Members" data-uid="VCard.VCardObject.Members">
+  Members
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L202"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Members { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Name_" data-uid="VCard.VCardObject.Name*"></a>
+
+  <h3 id="VCard_VCardObject_Name" data-uid="VCard.VCardObject.Name">
+  Name
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L92"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Name { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Nickname_" data-uid="VCard.VCardObject.Nickname*"></a>
+
+  <h3 id="VCard_VCardObject_Nickname" data-uid="VCard.VCardObject.Nickname">
+  Nickname
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L98"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Nickname { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Notes_" data-uid="VCard.VCardObject.Notes*"></a>
+
+  <h3 id="VCard_VCardObject_Notes" data-uid="VCard.VCardObject.Notes">
+  Notes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L207"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Notes { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Organization_" data-uid="VCard.VCardObject.Organization*"></a>
+
+  <h3 id="VCard_VCardObject_Organization" data-uid="VCard.VCardObject.Organization">
+  Organization
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L196"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Organization { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Photo_" data-uid="VCard.VCardObject.Photo*"></a>
+
+  <h3 id="VCard_VCardObject_Photo" data-uid="VCard.VCardObject.Photo">
+  Photo
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Photo { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_ProductId_" data-uid="VCard.VCardObject.ProductId*"></a>
+
+  <h3 id="VCard_VCardObject_ProductId" data-uid="VCard.VCardObject.ProductId">
+  ProductId
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L209"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? ProductId { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Related_" data-uid="VCard.VCardObject.Related*"></a>
+
+  <h3 id="VCard_VCardObject_Related" data-uid="VCard.VCardObject.Related">
+  Related
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L203"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Related { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Revision_" data-uid="VCard.VCardObject.Revision*"></a>
+
+  <h3 id="VCard_VCardObject_Revision" data-uid="VCard.VCardObject.Revision">
+  Revision
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L215"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Revision { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Role_" data-uid="VCard.VCardObject.Role*"></a>
+
+  <h3 id="VCard_VCardObject_Role" data-uid="VCard.VCardObject.Role">
+  Role
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L184"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Role { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Sound_" data-uid="VCard.VCardObject.Sound*"></a>
+
+  <h3 id="VCard_VCardObject_Sound" data-uid="VCard.VCardObject.Sound">
+  Sound
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L221"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Sound { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Telephones_" data-uid="VCard.VCardObject.Telephones*"></a>
+
+  <h3 id="VCard_VCardObject_Telephones" data-uid="VCard.VCardObject.Telephones">
+  Telephones
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Telephone numbers with type information</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;Telephone&gt; Telephones { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.Telephone.html">Telephone</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_TimeZone_" data-uid="VCard.VCardObject.TimeZone*"></a>
+
+  <h3 id="VCard_VCardObject_TimeZone" data-uid="VCard.VCardObject.TimeZone">
+  TimeZone
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L165"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? TimeZone { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Title_" data-uid="VCard.VCardObject.Title*"></a>
+
+  <h3 id="VCard_VCardObject_Title" data-uid="VCard.VCardObject.Title">
+  Title
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Title { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Uid_" data-uid="VCard.VCardObject.Uid*"></a>
+
+  <h3 id="VCard_VCardObject_Uid" data-uid="VCard.VCardObject.Uid">
+  Uid
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L227"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Uid { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Urls_" data-uid="VCard.VCardObject.Urls*"></a>
+
+  <h3 id="VCard_VCardObject_Urls" data-uid="VCard.VCardObject.Urls">
+  Urls
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L235"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;VCardProperty&gt; Urls { get; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">List</span>&lt;<a class="xref" href="VCard.VCardProperty.html">VCardProperty</a>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="VCard_VCardObject_Version_" data-uid="VCard.VCardObject.Version*"></a>
+
+  <h3 id="VCard_VCardObject_Version" data-uid="VCard.VCardObject.Version">
+  Version
+  <a class="header-action link-secondary" title="View source" href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L79"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string? Version { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">string</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/spec-works/vCard/blob/main/dotnet/src/VCard/VCard.DOM.cs/#L74" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <a href='https://spec-works.github.io/'>SpecWorks Factory</a> | <a href='https://github.com/spec-works/vCard'>GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

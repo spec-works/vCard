@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>vCard Documentation | vCard Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="vCard Documentation | vCard Documentation ">
+      
+      
+      <link rel="icon" href="images/logo.svg">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/spec-works/vCard/blob/main/docs/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/logo.svg" alt="vCard">
+            vCard
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="vcard-documentation">vCard Documentation</h1>
+
+<p>Welcome to the vCard documentation. This component provides libraries for parsing, validating, and serializing vCard data according to <a href="https://www.rfc-editor.org/rfc/rfc6350">RFC 6350</a>.</p>
+<h2 id="what-is-vcard">What is vCard?</h2>
+<p>vCard is the standard for electronic business cards. RFC 6350 defines version 4.0 of the vCard format, which enables the capture and exchange of information normally found on a business card, including:</p>
+<ul>
+<li>Names and organizations</li>
+<li>Postal addresses</li>
+<li>Phone numbers and email addresses</li>
+<li>URLs and instant messaging handles</li>
+<li>Photos and logos</li>
+<li>Geographical coordinates</li>
+<li>And much more</li>
+</ul>
+<h2 id="available-implementations">Available Implementations</h2>
+<p>Choose the implementation that matches your technology stack:</p>
+<h3 id="net"><a href="dotnet/index.html">.NET</a></h3>
+<p>Full-featured .NET library for vCard 4.0 parsing and generation.</p>
+<ul>
+<li><strong>Package</strong>: <a href="https://www.nuget.org/packages/VCard.Net">VCard.Net</a> on NuGet</li>
+<li><strong>Target Frameworks</strong>: .NET 10.0, .NET 8.0</li>
+<li><strong>Language</strong>: C# with nullable reference types</li>
+<li><a href="dotnet/index.html">View .NET Documentation →</a></li>
+</ul>
+<h3 id="python"><a href="python/index.html">Python</a></h3>
+<p>Python library for vCard 4.0 support.</p>
+<ul>
+<li><strong>Package</strong>: <a href="https://pypi.org/project/vcard/">vcard</a> on PyPI</li>
+<li><strong>Python Version</strong>: 3.8+</li>
+<li><a href="python/index.html">View Python Documentation →</a></li>
+</ul>
+<h3 id="rust"><a href="rust/index.html">Rust</a></h3>
+<p>Rust library for vCard 4.0 parsing and serialization.</p>
+<ul>
+<li><strong>Package</strong>: <a href="https://crates.io/crates/vcard">vcard</a> on crates.io</li>
+<li><strong>Rust Edition</strong>: 2021</li>
+<li><a href="rust/index.html">View Rust Documentation →</a></li>
+</ul>
+<h3 id="typescript"><a href="typescript/index.html">TypeScript</a></h3>
+<p>TypeScript library for vCard 4.0 parsing and serialization.</p>
+<ul>
+<li><strong>Package</strong>: <a href="https://www.npmjs.com/package/@specworks/vcard">@specworks/vcard</a> on npm</li>
+<li><strong>Node.js</strong>: 18+</li>
+<li><strong>Zero Dependencies</strong></li>
+<li><a href="typescript/index.html">View TypeScript Documentation →</a></li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="net-1">.NET</h3>
+<pre><code class="lang-bash">dotnet add package VCard.Net
+</code></pre>
+<pre><code class="lang-csharp">using VCard;
+
+// Parse a vCard
+var vcard = VCard.Parse(vcardText);
+Console.WriteLine($&quot;Name: {vcard.FormattedName}&quot;);
+
+// Create a vCard
+var newCard = new VCard
+{
+    FormattedName = &quot;John Doe&quot;,
+    Email = &quot;john@example.com&quot;
+};
+string vcardText = newCard.ToString();
+</code></pre>
+<h3 id="python-1">Python</h3>
+<pre><code class="lang-bash">pip install vcard
+</code></pre>
+<pre><code class="lang-python">from vcard import VCard
+
+# Parse a vCard
+vcard = VCard.parse(vcard_text)
+print(f&quot;Name: {vcard.formatted_name}&quot;)
+
+# Create a vCard
+new_card = VCard(
+    formatted_name=&quot;John Doe&quot;,
+    email=&quot;john@example.com&quot;
+)
+vcard_text = str(new_card)
+</code></pre>
+<h3 id="rust-1">Rust</h3>
+<pre><code class="lang-toml">[dependencies]
+vcard = &quot;*&quot;
+</code></pre>
+<pre><code class="lang-rust">use vcard::VCard;
+
+// Parse a vCard
+let vcard = VCard::parse(&amp;vcard_text)?;
+println!(&quot;Name: {}&quot;, vcard.formatted_name);
+
+// Create a vCard
+let new_card = VCard::new()
+    .formatted_name(&quot;John Doe&quot;)
+    .email(&quot;john@example.com&quot;);
+let vcard_text = new_card.to_string();
+</code></pre>
+<h3 id="typescript-1">TypeScript</h3>
+<pre><code class="lang-bash">npm install @specworks/vcard
+</code></pre>
+<pre><code class="lang-typescript">import { VCardParser, VCardObject, VCardSerializer, Telephone, TelType } from '@specworks/vcard';
+
+// Parse a vCard
+const parser = new VCardParser();
+const vcards = parser.parse(vcardText);
+console.log(`Name: ${vcards[0].formattedName}`);
+
+// Create a vCard
+const vcard = new VCardObject();
+vcard.version = '4.0';
+vcard.formattedName = 'John Doe';
+const serializer = new VCardSerializer();
+const text = serializer.serialize(vcard);
+</code></pre>
+<h2 id="specification-compliance">Specification Compliance</h2>
+<p>All implementations follow <a href="https://www.rfc-editor.org/rfc/rfc6350">RFC 6350</a> - vCard Format Specification version 4.0.</p>
+<p>Key features implemented:</p>
+<ul>
+<li>✅ All required properties (VERSION, FN, N)</li>
+<li>✅ All standard properties (TEL, EMAIL, ADR, etc.)</li>
+<li>✅ Property parameters (TYPE, VALUE, PREF, etc.)</li>
+<li>✅ Property grouping</li>
+<li>✅ Value escaping and encoding</li>
+<li>✅ Multiple property instances</li>
+<li>✅ Extensibility (X-properties)</li>
+</ul>
+<p>See each implementation's documentation for detailed compliance information.</p>
+<h2 id="test-cases">Test Cases</h2>
+<p>All implementations are tested against shared test cases in the <a href="https://github.com/spec-works/vCard/tree/main/testcases">testcases/</a> directory. This ensures consistency across languages.</p>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are welcome! See the <a href="https://github.com/spec-works/vCard">GitHub repository</a> for:</p>
+<ul>
+<li>Issue tracking</li>
+<li>Pull request guidelines</li>
+<li>Architecture Decision Records (ADRs)</li>
+<li>Development setup instructions</li>
+</ul>
+<h2 id="license">License</h2>
+<p>All vCard implementations are licensed under the <a href="https://github.com/spec-works/vCard/blob/main/LICENSE">MIT License</a>.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><strong>GitHub Repository</strong>: <a href="https://github.com/spec-works/vCard">github.com/spec-works/vCard</a></li>
+<li><strong>RFC 6350 Specification</strong>: <a href="https://www.rfc-editor.org/rfc/rfc6350">rfc-editor.org/rfc/rfc6350</a></li>
+<li><strong>SpecWorks Factory</strong>: <a href="https://spec-works.github.io">spec-works.github.io</a></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/spec-works/vCard/blob/main/docs/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <a href='https://spec-works.github.io/'>SpecWorks Factory</a> | <a href='https://github.com/spec-works/vCard'>GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

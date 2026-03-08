@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>vCard Python Library | vCard Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="vCard Python Library | vCard Documentation ">
+      
+      
+      <link rel="icon" href="../images/logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/spec-works/vCard/blob/main/docs/python/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="vCard">
+            vCard
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="vcard-python-library">vCard Python Library</h1>
+
+<p>A complete Python library for parsing, validating, and serializing vCard (text/vcard) data according to RFC 6350.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Complete DOM</strong>: Object-oriented representation of all vCard properties</li>
+<li><strong>Strongly Typed Builder API</strong>: Fluent, type-safe API for creating vCards</li>
+<li><strong>Type-Safe Enums</strong>: Runtime checking for property parameters (TelType, EmailType, AdrType)</li>
+<li><strong>RFC 6350 Compliant Parser</strong>: Line unfolding, property parameters, escape sequences</li>
+<li><strong>vCard Serializer</strong>: Write vCard format with automatic line folding</li>
+<li><strong>Comprehensive Validator</strong>: Required property validation and format validation</li>
+<li><strong>Type Hints</strong>: Full type annotations for better IDE support</li>
+<li><strong>Zero Dependencies</strong>: Pure Python implementation</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<pre><code class="lang-bash"># From source
+git clone https://github.com/yourusername/vcard-python.git
+cd vcard-python/python
+pip install -e .
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="parsing-a-vcard-string">Parsing a vCard String</h3>
+<pre><code class="lang-python">from vcard import VCardParser
+
+vcard_data = &quot;&quot;&quot;BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+N:Doe;John;Michael;Mr.;Jr.
+TEL;TYPE=work:+1-555-555-1234
+EMAIL;TYPE=work:john@example.com
+ORG:ABC Corporation
+TITLE:Software Engineer
+END:VCARD&quot;&quot;&quot;
+
+parser = VCardParser()
+vcards = parser.parse(vcard_data)
+vcard = vcards[0]  # Get the first vCard
+
+print(f&quot;Name: {vcard.formatted_name}&quot;)
+print(f&quot;Organization: {vcard.organization}&quot;)
+print(f&quot;Title: {vcard.title}&quot;)
+</code></pre>
+<h3 id="parsing-from-a-file">Parsing from a File</h3>
+<pre><code class="lang-python">parser = VCardParser()
+vcards = parser.parse_file(&quot;contact.vcf&quot;)
+vcard = vcards[0]  # Get the first vCard
+</code></pre>
+<h3 id="parsing-multiple-vcards">Parsing Multiple vCards</h3>
+<p>The <code>parse()</code> method always returns a list of vCards, whether the input contains one or multiple vCards. This prevents silent data loss when a file contains multiple vCards.</p>
+<pre><code class="lang-python">parser = VCardParser()
+vcards = parser.parse(vcard_data)  # Returns all vCards found
+
+for vcard in vcards:
+    print(f&quot;Contact: {vcard.formatted_name}&quot;)
+</code></pre>
+<h3 id="creating-a-vcard-with-the-strongly-typed-api-recommended">Creating a vCard with the Strongly Typed API (Recommended)</h3>
+<p>The library provides a type-safe builder API for creating vCards:</p>
+<pre><code class="lang-python">from vcard import VCardBuilder, TelType, EmailType, AdrType
+
+vcard = (VCardBuilder()
+    .with_version(&quot;4.0&quot;)
+    .with_formatted_name(&quot;John Michael Doe&quot;)
+    .with_name_parts(&quot;Doe&quot;, &quot;John&quot;, &quot;Michael&quot;, &quot;Mr.&quot;, &quot;Jr.&quot;)
+    .with_organization(&quot;ABC Corporation&quot;)
+    .with_title(&quot;Software Engineer&quot;)
+    .with_telephone(&quot;+1-555-555-1234&quot;, [TelType.WORK, TelType.VOICE])
+    .with_telephone(&quot;555-555-5678&quot;, [TelType.HOME])
+    .with_email(&quot;john@example.com&quot;, [EmailType.WORK])
+    .with_address_parts(&quot;&quot;, &quot;&quot;, &quot;123 Main Street&quot;, &quot;Springfield&quot;, &quot;IL&quot;, &quot;62701&quot;, &quot;USA&quot;, [AdrType.WORK])
+    .with_url(&quot;https://www.example.com&quot;)
+    .with_birthday(&quot;19850415&quot;)
+    .with_note(&quot;Important contact&quot;)
+    .build())
+
+print(f&quot;Name: {vcard.formatted_name}&quot;)
+</code></pre>
+<h3 id="creating-a-vcard-with-the-generic-api">Creating a vCard with the Generic API</h3>
+<p>For extension properties or when you need more control:</p>
+<pre><code class="lang-python">from vcard import VCardObject, VCardProperty
+
+vcard = VCardObject()
+vcard.version = &quot;4.0&quot;
+vcard.formatted_name = &quot;John Doe&quot;
+vcard.name = &quot;Doe;John;Michael;Mr.;Jr.&quot;
+
+tel_prop = VCardProperty(&quot;TEL&quot;, &quot;+1-555-555-1234&quot;)
+tel_prop.add_parameter(&quot;TYPE&quot;, &quot;work&quot;)
+tel_prop.add_parameter(&quot;TYPE&quot;, &quot;voice&quot;)
+vcard.add_property(tel_prop)
+
+email_prop = VCardProperty(&quot;EMAIL&quot;, &quot;john@example.com&quot;)
+email_prop.add_parameter(&quot;TYPE&quot;, &quot;work&quot;)
+vcard.add_property(email_prop)
+
+# Add custom extension property
+vcard.add_property(VCardProperty(&quot;X-CUSTOM&quot;, &quot;Custom Value&quot;))
+</code></pre>
+<h3 id="serializing-to-vcard-format">Serializing to vCard Format</h3>
+<pre><code class="lang-python">from vcard import VCardSerializer
+
+serializer = VCardSerializer()
+vcard_text = serializer.serialize(vcard)
+print(vcard_text)
+
+# Save to file
+serializer.serialize_to_file(vcard, &quot;contact.vcf&quot;)
+</code></pre>
+<h3 id="validating-a-vcard">Validating a vCard</h3>
+<pre><code class="lang-python">from vcard import VCardValidator
+
+validator = VCardValidator()
+result = validator.validate(vcard)
+
+if result.is_valid:
+    print(&quot;vCard is valid!&quot;)
+else:
+    print(&quot;Validation errors:&quot;)
+    for error in result.errors:
+        print(f&quot;  - {error}&quot;)
+
+# Get detailed summary
+print(result.get_summary())
+</code></pre>
+<h3 id="working-with-structured-data">Working with Structured Data</h3>
+<pre><code class="lang-python">from vcard import StructuredName, StructuredAddress
+
+# Parse structured name
+name_prop = vcard.get_property(&quot;N&quot;)
+if name_prop:
+    structured_name = StructuredName.parse(name_prop.value)
+    print(f&quot;Family Name: {structured_name.family_name}&quot;)
+    print(f&quot;Given Name: {structured_name.given_name}&quot;)
+
+# Parse structured address
+address_prop = vcard.get_property(&quot;ADR&quot;)
+if address_prop:
+    structured_address = StructuredAddress.parse(address_prop.value)
+    print(f&quot;Street: {structured_address.street_address}&quot;)
+    print(f&quot;City: {structured_address.locality}&quot;)
+    print(f&quot;Postal Code: {structured_address.postal_code}&quot;)
+</code></pre>
+<h2 id="project-structure">Project Structure</h2>
+<pre><code>vcard-python/
+├── src/
+│   └── vcard/
+│       ├── __init__.py       # Package exports
+│       ├── dom.py            # Document Object Model
+│       ├── parser.py         # RFC 6350 parser
+│       ├── serializer.py     # vCard serializer
+│       └── validator.py      # Validation logic
+├── tests/
+│   └── test_vcard.py         # Unit tests
+├── README.md                 # This file
+└── setup.py                  # Package setup
+</code></pre>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Python 3.7+</li>
+<li>No external dependencies</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<pre><code class="lang-bash">python -m pytest tests/
+</code></pre>
+<h2 id="license">License</h2>
+<p>MIT License - This implementation is provided for educational and commercial use.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc6350.html">RFC 6350 - vCard Format Specification</a></li>
+<li><a href="https://datatracker.ietf.org/doc/rfc9554/">RFC 9554 - vCard Format Extensions for JSContact</a></li>
+<li><a href="https://www.iana.org/assignments/vcard-elements/vcard-elements.xhtml">IANA vCard Elements Registry</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are welcome! Please ensure all tests pass before submitting pull requests.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/spec-works/vCard/blob/main/docs/python/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <a href='https://spec-works.github.io/'>SpecWorks Factory</a> | <a href='https://github.com/spec-works/vCard'>GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

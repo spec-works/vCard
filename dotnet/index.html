@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>VCard.Net | vCard Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="VCard.Net | vCard Documentation ">
+      
+      
+      <link rel="icon" href="../images/logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/spec-works/vCard/blob/main/docs/dotnet/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="vCard">
+            vCard
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="vcardnet">VCard.Net</h1>
+
+<p>A complete .NET library for parsing, validating, and serializing vCard (text/vcard) data according to RFC 6350.</p>
+<p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li><p><strong>Complete DOM</strong>: Object-oriented representation of all vCard properties</p>
+<ul>
+<li>FN (Formatted Name)</li>
+<li>N (Structured Name)</li>
+<li>TEL (Telephone)</li>
+<li>EMAIL (Email Address)</li>
+<li>ADR (Address)</li>
+<li>ORG (Organization)</li>
+<li>And many more...</li>
+</ul>
+</li>
+<li><p><strong>Strongly Typed Object Initializer API</strong></p>
+<ul>
+<li>Idiomatic C# object initializers for creating vCards</li>
+<li>Type-safe flagged enums for property parameters (TelType, EmailType, AdrType)</li>
+<li>Strongly-typed classes (Telephone, Email, Address) with bitwise flag support</li>
+<li>Compile-time checking prevents errors</li>
+<li>Excellent IDE autocomplete support</li>
+</ul>
+</li>
+<li><p><strong>RFC 6350 Compliant Parser</strong></p>
+<ul>
+<li>Line unfolding support</li>
+<li>Property parameter parsing</li>
+<li>Escape sequence handling</li>
+<li>Multiple vCard support</li>
+</ul>
+</li>
+<li><p><strong>vCard Serializer</strong></p>
+<ul>
+<li>Write vCard format</li>
+<li>Automatic line folding</li>
+<li>Property escaping</li>
+<li>Extension methods for easy serialization</li>
+</ul>
+</li>
+<li><p><strong>Comprehensive Validator</strong></p>
+<ul>
+<li>Required property validation (VERSION, FN)</li>
+<li>Property format validation (EMAIL, URL, GEO, TZ)</li>
+<li>Component-specific rules</li>
+<li>Warning system for non-critical issues</li>
+</ul>
+</li>
+<li><p><strong>Extensive Test Coverage</strong></p>
+<ul>
+<li>42+ unit tests</li>
+<li>Parser tests</li>
+<li>Serializer tests</li>
+<li>Validator tests</li>
+<li>Object Initializer API tests</li>
+<li>Flagged enum tests</li>
+<li>Round-trip tests</li>
+</ul>
+</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="building-from-source">Building from Source</h3>
+<pre><code class="lang-bash">git clone https://github.com/yourusername/vcard-net.git
+cd vcard-net/dotnet
+dotnet build
+</code></pre>
+<p>Run the tests:</p>
+<pre><code class="lang-bash">dotnet test
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="parsing-a-vcard-string">Parsing a vCard String</h3>
+<pre><code class="lang-csharp">using VCard;
+
+var vcardData = @&quot;BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+N:Doe;John;Michael;Mr.;Jr.
+TEL;TYPE=work:+1-555-555-1234
+EMAIL;TYPE=work:john@example.com
+ORG:ABC Corporation
+TITLE:Software Engineer
+END:VCARD&quot;;
+
+var parser = new VCardParser();
+var vcards = parser.Parse(vcardData);
+var vcard = vcards[0]; // or vcards.First()
+
+Console.WriteLine($&quot;Name: {vcard.FormattedName}&quot;);
+Console.WriteLine($&quot;Organization: {vcard.Organization}&quot;);
+Console.WriteLine($&quot;Title: {vcard.Title}&quot;);
+</code></pre>
+<h3 id="parsing-from-a-file">Parsing from a File</h3>
+<pre><code class="lang-csharp">var parser = new VCardParser();
+var vcards = parser.ParseFile(&quot;contact.vcf&quot;);
+var vcard = vcards[0]; // Get the first vCard
+</code></pre>
+<h3 id="parsing-multiple-vcards">Parsing Multiple vCards</h3>
+<p>The <code>Parse()</code> method always returns a list of vCards, whether the input contains one or multiple vCards. This prevents silent data loss when a file contains multiple vCards.</p>
+<pre><code class="lang-csharp">var parser = new VCardParser();
+var vcards = parser.Parse(vcardData); // Returns all vCards found
+
+foreach (var vcard in vcards)
+{
+    Console.WriteLine($&quot;Contact: {vcard.FormattedName}&quot;);
+}
+</code></pre>
+<h3 id="creating-a-vcard-with-object-initializers-recommended">Creating a vCard with Object Initializers (Recommended)</h3>
+<p>The library provides idiomatic C# object initializers with strongly-typed classes:</p>
+<pre><code class="lang-csharp">using VCard;
+
+var vcard = new VCardObject
+{
+    Version = &quot;4.0&quot;,
+    FormattedName = &quot;John Michael Doe&quot;,
+    Name = &quot;Doe;John;Michael;Mr.;Jr.&quot;,
+    Organization = &quot;ABC Corporation&quot;,
+    Title = &quot;Software Engineer&quot;,
+    Birthday = &quot;19850415&quot;,
+    Telephones = new List&lt;Telephone&gt;
+    {
+        new Telephone
+        {
+            Value = &quot;+1-555-555-1234&quot;,
+            Types = TelType.Work | TelType.Voice
+        },
+        new Telephone
+        {
+            Value = &quot;555-555-5678&quot;,
+            Types = TelType.Home
+        }
+    },
+    Emails = new List&lt;Email&gt;
+    {
+        new Email
+        {
+            Value = &quot;john@example.com&quot;,
+            Types = EmailType.Work
+        }
+    },
+    Addresses = new List&lt;Address&gt;
+    {
+        new Address
+        {
+            Street = &quot;123 Main Street&quot;,
+            City = &quot;Springfield&quot;,
+            State = &quot;IL&quot;,
+            PostalCode = &quot;62701&quot;,
+            Country = &quot;USA&quot;,
+            Types = AdrType.Work
+        }
+    }
+};
+
+// Add other properties
+vcard.AddProperty(new VCardProperty(&quot;URL&quot;, &quot;https://www.example.com&quot;));
+vcard.AddProperty(new VCardProperty(&quot;NOTE&quot;, &quot;Important contact&quot;));
+
+Console.WriteLine(vcard.FormattedName); // &quot;John Michael Doe&quot;
+</code></pre>
+<h3 id="using-flagged-enums-for-multiple-types">Using Flagged Enums for Multiple Types</h3>
+<p>The strongly-typed classes use flagged enums, allowing multiple types via bitwise operations:</p>
+<pre><code class="lang-csharp">// Telephone with multiple types
+var workPhone = new Telephone
+{
+    Value = &quot;+1-555-1234&quot;,
+    Types = TelType.Work | TelType.Voice | TelType.Cell
+};
+
+// Check for specific types
+if (workPhone.Types.HasFlag(TelType.Work))
+{
+    Console.WriteLine(&quot;This is a work phone&quot;);
+}
+
+// Email with multiple types
+var email = new Email
+{
+    Value = &quot;john@work.com&quot;,
+    Types = EmailType.Work | EmailType.Internet
+};
+
+// Address with multiple types
+var address = new Address
+{
+    Street = &quot;123 Main St&quot;,
+    City = &quot;Springfield&quot;,
+    Types = AdrType.Work | AdrType.Postal
+};
+</code></pre>
+<h3 id="adding-custom-extension-properties">Adding Custom Extension Properties</h3>
+<p>For extension properties not in the strongly-typed API:</p>
+<pre><code class="lang-csharp">var vcard = new VCardObject
+{
+    Version = &quot;4.0&quot;,
+    FormattedName = &quot;John Doe&quot;
+};
+
+// Add custom extension property
+vcard.AddProperty(new VCardProperty(&quot;X-CUSTOM&quot;, &quot;Custom Value&quot;));
+</code></pre>
+<h3 id="serializing-to-vcard-format">Serializing to vCard Format</h3>
+<pre><code class="lang-csharp">// Using the serializer
+var serializer = new VCardSerializer();
+string vcardText = serializer.Serialize(vcard);
+
+// Or using extension method
+string vcardText = vcard.ToVCard();
+
+// Save to file
+vcard.SaveToFile(&quot;contact.vcf&quot;);
+
+// Or using serializer
+serializer.SerializeToFile(vcard, &quot;contact.vcf&quot;);
+</code></pre>
+<h3 id="validating-a-vcard">Validating a vCard</h3>
+<pre><code class="lang-csharp">var validator = new VCardValidator();
+var result = validator.Validate(vcard);
+
+if (result.IsValid)
+{
+    Console.WriteLine(&quot;vCard is valid!&quot;);
+}
+else
+{
+    Console.WriteLine(&quot;Validation errors:&quot;);
+    foreach (var error in result.Errors)
+    {
+        Console.WriteLine($&quot;  - {error}&quot;);
+    }
+}
+
+// Get detailed summary
+Console.WriteLine(result.GetSummary());
+</code></pre>
+<h3 id="working-with-strongly-typed-collections">Working with Strongly-Typed Collections</h3>
+<pre><code class="lang-csharp">// Access telephones
+foreach (var telephone in vcard.Telephones)
+{
+    Console.WriteLine($&quot;Phone: {telephone.Value}&quot;);
+
+    // Check for specific types using flagged enums
+    if (telephone.Types.HasFlag(TelType.Work))
+    {
+        Console.WriteLine(&quot;  - Work phone&quot;);
+    }
+    if (telephone.Types.HasFlag(TelType.Cell))
+    {
+        Console.WriteLine(&quot;  - Cell phone&quot;);
+    }
+}
+
+// Access emails
+foreach (var email in vcard.Emails)
+{
+    Console.WriteLine($&quot;Email: {email.Value}&quot;);
+    if (email.Types.HasFlag(EmailType.Work))
+    {
+        Console.WriteLine(&quot;  - Work email&quot;);
+    }
+}
+
+// Access addresses
+foreach (var address in vcard.Addresses)
+{
+    Console.WriteLine($&quot;Address:&quot;);
+    Console.WriteLine($&quot;  Street: {address.Street}&quot;);
+    Console.WriteLine($&quot;  City: {address.City}&quot;);
+    Console.WriteLine($&quot;  State: {address.State}&quot;);
+    Console.WriteLine($&quot;  Postal Code: {address.PostalCode}&quot;);
+    Console.WriteLine($&quot;  Country: {address.Country}&quot;);
+
+    if (address.Types.HasFlag(AdrType.Work))
+    {
+        Console.WriteLine(&quot;  - Work address&quot;);
+    }
+}
+
+// Access generic properties (for properties not yet strongly-typed)
+var urls = vcard.Urls;
+foreach (var url in urls)
+{
+    Console.WriteLine($&quot;URL: {url.Value}&quot;);
+}
+</code></pre>
+<h3 id="working-with-structured-data">Working with Structured Data</h3>
+<pre><code class="lang-csharp">// Parse structured name
+var name = vcard.GetProperty(&quot;N&quot;);
+var structuredName = StructuredName.Parse(name.Value);
+Console.WriteLine($&quot;Family Name: {structuredName.FamilyName}&quot;);
+Console.WriteLine($&quot;Given Name: {structuredName.GivenName}&quot;);
+Console.WriteLine($&quot;Honorific Prefix: {structuredName.HonorificPrefixes}&quot;);
+
+// Parse structured address
+var address = vcard.GetProperty(&quot;ADR&quot;);
+var structuredAddress = StructuredAddress.Parse(address.Value);
+Console.WriteLine($&quot;Street: {structuredAddress.StreetAddress}&quot;);
+Console.WriteLine($&quot;City: {structuredAddress.Locality}&quot;);
+Console.WriteLine($&quot;State: {structuredAddress.Region}&quot;);
+Console.WriteLine($&quot;Postal Code: {structuredAddress.PostalCode}&quot;);
+Console.WriteLine($&quot;Country: {structuredAddress.CountryName}&quot;);
+</code></pre>
+<h2 id="vcard-structure">vCard Structure</h2>
+<h3 id="common-properties">Common Properties</h3>
+<ul>
+<li><strong>VERSION</strong>: vCard version (required, must be &quot;4.0&quot;, &quot;3.0&quot;, or &quot;2.1&quot;)</li>
+<li><strong>FN</strong>: Formatted Name (required)</li>
+<li><strong>N</strong>: Structured Name (Family;Given;Additional;Prefix;Suffix)</li>
+<li><strong>NICKNAME</strong>: Nickname</li>
+<li><strong>PHOTO</strong>: Photo or avatar URI</li>
+<li><strong>BDAY</strong>: Birthday</li>
+<li><strong>ANNIVERSARY</strong>: Anniversary date</li>
+<li><strong>GENDER</strong>: Gender</li>
+<li><strong>TEL</strong>: Telephone number</li>
+<li><strong>EMAIL</strong>: Email address</li>
+<li><strong>IMPP</strong>: Instant messaging address</li>
+<li><strong>LANG</strong>: Language</li>
+<li><strong>ADR</strong>: Delivery address (POBox;Extended;Street;Locality;Region;PostalCode;Country)</li>
+<li><strong>GEO</strong>: Geographic position</li>
+<li><strong>TZ</strong>: Time zone</li>
+<li><strong>TITLE</strong>: Job title</li>
+<li><strong>ROLE</strong>: Role or occupation</li>
+<li><strong>LOGO</strong>: Logo URI</li>
+<li><strong>ORG</strong>: Organization</li>
+<li><strong>MEMBER</strong>: Group member</li>
+<li><strong>RELATED</strong>: Related entity</li>
+<li><strong>CATEGORIES</strong>: Categories or tags</li>
+<li><strong>NOTE</strong>: Note or comment</li>
+<li><strong>PRODID</strong>: Product identifier</li>
+<li><strong>REV</strong>: Revision date/time</li>
+<li><strong>SOUND</strong>: Pronunciation sound URI</li>
+<li><strong>UID</strong>: Unique identifier</li>
+<li><strong>URL</strong>: Web address</li>
+<li><strong>KEY</strong>: Public key or authentication certificate</li>
+</ul>
+<h2 id="validation-rules">Validation Rules</h2>
+<p>The validator checks for:</p>
+<h3 id="required-properties">Required Properties</h3>
+<ul>
+<li><strong>VERSION</strong>: Must be present and be &quot;4.0&quot;, &quot;3.0&quot;, or &quot;2.1&quot;</li>
+<li><strong>FN</strong>: Must be present and non-empty</li>
+</ul>
+<h3 id="property-format-validation">Property Format Validation</h3>
+<ul>
+<li><strong>EMAIL</strong>: Basic email format validation (warning only)</li>
+<li><strong>URL</strong>: Valid URI format</li>
+<li><strong>GEO</strong>: Geographic coordinates format (geo:lat,long)</li>
+<li><strong>TZ</strong>: Time zone format (UTC offset or timezone ID)</li>
+<li><strong>BDAY/ANNIVERSARY</strong>: Date format validation</li>
+<li><strong>N</strong>: Structured name component validation</li>
+<li><strong>ADR</strong>: Structured address component validation</li>
+</ul>
+<h3 id="property-constraints">Property Constraints</h3>
+<ul>
+<li><strong>TEL</strong>: Cannot be empty</li>
+<li><strong>EMAIL</strong>: Cannot be empty</li>
+<li><strong>UID</strong>: Cannot be empty if present</li>
+</ul>
+<h2 id="rfc-6350-compliance">RFC 6350 Compliance</h2>
+<p>This implementation follows RFC 6350 (vCard Format Specification):</p>
+<ul>
+<li>Line folding/unfolding (Section 3.2)</li>
+<li>Content lines (Section 3.3)</li>
+<li>Property parameters (Section 5)</li>
+<li>Property value data types (Section 4)</li>
+<li>vCard properties (Section 6)</li>
+<li>Escape sequences for special characters</li>
+</ul>
+<h2 id="testing">Testing</h2>
+<p>The test suite includes:</p>
+<ul>
+<li><strong>Parser Tests</strong>: 15+ tests covering various parsing scenarios</li>
+<li><strong>Validator Tests</strong>: 8+ tests for validation rules</li>
+<li><strong>Serializer Tests</strong>: 5+ tests for serialization</li>
+<li><strong>Object Initializer API Tests</strong>: 11+ tests for strongly typed object initializers</li>
+<li><strong>Flagged Enum Tests</strong>: 3+ tests for bitwise enum operations</li>
+<li><strong>Round-Trip Tests</strong>: 2+ tests for parse-serialize-parse cycles</li>
+</ul>
+<p>Run all tests:</p>
+<pre><code class="lang-bash">dotnet test
+# Result: Passed! - 42 tests
+</code></pre>
+<h2 id="project-structure">Project Structure</h2>
+<pre><code>VCard.Net/
+├── src/
+│   └── VCard/                     # Main library
+│       ├── VCard.DOM.cs           # Document Object Model
+│       ├── VCard.StrongTypes.cs   # Strongly-typed classes (Telephone, Email, Address)
+│       ├── VCard.Parser.cs        # RFC 6350 parser
+│       ├── VCard.Serializer.cs    # vCard serializer
+│       ├── VCard.Validator.cs     # Validation logic
+│       └── VCard.csproj           # Library project file
+├── tests/
+│   └── VCard.Tests/               # Test project
+│       ├── VCard.Tests.cs         # Unit tests
+│       └── VCard.Tests.csproj     # Test project file
+├── VCard.sln                      # Solution file
+└── README.md                      # This file
+</code></pre>
+<h2 id="architecture">Architecture</h2>
+<h3 id="parser">Parser</h3>
+<ol>
+<li><strong>Line Unfolding</strong>: Handles multi-line property values</li>
+<li><strong>Tokenization</strong>: Splits content lines into name, parameters, and value</li>
+<li><strong>Property Parsing</strong>: Extracts properties with parameters</li>
+<li><strong>Value Unescaping</strong>: Handles escape sequences (\n, ;, \, ,)</li>
+<li><strong>Multiple vCard Support</strong>: Can parse files containing multiple vCards</li>
+</ol>
+<h3 id="serializer">Serializer</h3>
+<ol>
+<li><strong>Component Serialization</strong>: Serializes vCard properties in correct order</li>
+<li><strong>Property Formatting</strong>: Formats properties with parameters</li>
+<li><strong>Line Folding</strong>: Automatically folds lines longer than 75 characters</li>
+<li><strong>Value Escaping</strong>: Escapes special characters (\n, ;, \, ,)</li>
+</ol>
+<h3 id="validator">Validator</h3>
+<ol>
+<li><strong>Required Property Validation</strong>: Checks for VERSION and FN</li>
+<li><strong>Format Validation</strong>: Validates email, URL, date, geo, and timezone formats</li>
+<li><strong>Property Constraints</strong>: Enforces property-specific rules</li>
+<li><strong>Result Reporting</strong>: Provides detailed error and warning messages</li>
+</ol>
+<h2 id="license">License</h2>
+<p>MIT License - This implementation is provided for educational and commercial use.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc6350.html">RFC 6350 - vCard Format Specification</a></li>
+<li><a href="https://datatracker.ietf.org/doc/rfc9554/">RFC 9554 - vCard Format Extensions for JSContact</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc6868.html">RFC 6868 - Parameter Value Encoding in iCalendar and vCard</a></li>
+<li><a href="https://www.iana.org/assignments/vcard-elements/vcard-elements.xhtml">IANA vCard Elements Registry</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are welcome! Please ensure all tests pass before submitting pull requests.</p>
+<h3 id="development">Development</h3>
+<ol>
+<li>Fork the repository</li>
+<li>Create a feature branch</li>
+<li>Make your changes</li>
+<li>Add tests for new functionality</li>
+<li>Ensure all tests pass: <code>dotnet test</code></li>
+<li>Submit a pull request</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/spec-works/vCard/blob/main/docs/dotnet/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <a href='https://spec-works.github.io/'>SpecWorks Factory</a> | <a href='https://github.com/spec-works/vCard'>GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

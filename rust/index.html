@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>vCard Rust Library | vCard Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="vCard Rust Library | vCard Documentation ">
+      
+      
+      <link rel="icon" href="../images/logo.svg">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/spec-works/vCard/blob/main/docs/rust/index.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.svg" alt="vCard">
+            vCard
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="vcard-rust-library">vCard Rust Library</h1>
+
+<p>A complete Rust library for parsing and generating vCard (RFC 6350) data.</p>
+<p><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
+<h2 id="features">Features</h2>
+<ul>
+<li><strong>Complete DOM</strong>: Object-oriented representation of all vCard properties</li>
+<li><strong>RFC 6350 Compliant Parser</strong>: Line unfolding, property parameters, escape sequences</li>
+<li><strong>Strongly Typed Builder API</strong>: Fluent, type-safe API for creating vCards</li>
+<li><strong>Type-Safe Enums</strong>: Compile-time checking for property parameters (TelType, EmailType, AdrType)</li>
+<li><strong>Type Safety</strong>: Leverages Rust's type system for safe parsing and construction</li>
+<li><strong>Zero Dependencies</strong>: Pure Rust implementation</li>
+<li><strong>Comprehensive Tests</strong>: Full test coverage with 12+ unit tests</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Add this to your <code>Cargo.toml</code>:</p>
+<pre><code class="lang-toml">[dependencies]
+vcard = &quot;1.0.0&quot;
+</code></pre>
+<h2 id="usage">Usage</h2>
+<h3 id="parsing-a-vcard-string">Parsing a vCard String</h3>
+<pre><code class="lang-rust">use vcard::{VCardParser, VCardObject};
+
+let vcard_data = &quot;BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+N:Doe;John;Michael;Mr.;Jr.
+TEL;TYPE=work:+1-555-555-1234
+EMAIL;TYPE=work:john@example.com
+ORG:ABC Corporation
+TITLE:Software Engineer
+END:VCARD&quot;;
+
+let mut parser = VCardParser::new();
+let vcards = parser.parse(vcard_data).unwrap();
+let vcard = &amp;vcards[0]; // or vcards.first().unwrap()
+
+println!(&quot;Name: {}&quot;, vcard.formatted_name().unwrap());
+println!(&quot;Organization: {}&quot;, vcard.organization().unwrap());
+println!(&quot;Title: {}&quot;, vcard.title().unwrap());
+</code></pre>
+<h3 id="parsing-multiple-vcards">Parsing Multiple vCards</h3>
+<p>The <code>parse()</code> method always returns a <code>Vec&lt;VCardObject&gt;</code>, whether the input contains one or multiple vCards. This prevents silent data loss when a stream contains multiple vCards.</p>
+<pre><code class="lang-rust">let vcard_data = &quot;BEGIN:VCARD
+VERSION:4.0
+FN:John Doe
+END:VCARD
+
+BEGIN:VCARD
+VERSION:4.0
+FN:Jane Smith
+END:VCARD&quot;;
+
+let mut parser = VCardParser::new();
+let vcards = parser.parse(vcard_data).unwrap(); // Returns all vCards found
+
+for vcard in &amp;vcards {
+    println!(&quot;Contact: {}&quot;, vcard.formatted_name().unwrap());
+}
+</code></pre>
+<h3 id="creating-a-vcard-with-the-strongly-typed-api-recommended">Creating a vCard with the Strongly Typed API (Recommended)</h3>
+<p>The library provides a type-safe builder API for creating vCards:</p>
+<pre><code class="lang-rust">use vcard::{VCardObject, TelType, EmailType, AdrType};
+
+let vcard = VCardObject::builder()
+    .version(&quot;4.0&quot;)
+    .formatted_name(&quot;John Michael Doe&quot;)
+    .name_parts(&quot;Doe&quot;, &quot;John&quot;, &quot;Michael&quot;, &quot;Mr.&quot;, &quot;Jr.&quot;)
+    .organization(&quot;ABC Corporation&quot;)
+    .title(&quot;Software Engineer&quot;)
+    .telephone(&quot;+1-555-555-1234&quot;, vec![TelType::Work, TelType::Voice])
+    .telephone(&quot;555-555-5678&quot;, vec![TelType::Home])
+    .email(&quot;john@example.com&quot;, vec![EmailType::Work])
+    .address_parts(
+        &quot;&quot;,                    // PO Box
+        &quot;&quot;,                    // Extended
+        &quot;123 Main Street&quot;,     // Street
+        &quot;Springfield&quot;,         // Locality
+        &quot;IL&quot;,                  // Region
+        &quot;62701&quot;,               // Postal Code
+        &quot;USA&quot;,                 // Country
+        vec![AdrType::Work]
+    )
+    .url(&quot;https://www.example.com&quot;)
+    .birthday(&quot;19850415&quot;)
+    .note(&quot;Important contact&quot;)
+    .build();
+
+assert_eq!(vcard.version(), Some(&quot;4.0&quot;));
+assert_eq!(vcard.formatted_name(), Some(&quot;John Michael Doe&quot;));
+</code></pre>
+<h3 id="creating-a-vcard-with-the-generic-api">Creating a vCard with the Generic API</h3>
+<p>For extension properties or when you need more control:</p>
+<pre><code class="lang-rust">use vcard::{VCardObject, VCardProperty};
+
+let mut vcard = VCardObject::new();
+
+vcard.add_property(VCardProperty::new(&quot;VERSION&quot;, &quot;4.0&quot;));
+vcard.add_property(VCardProperty::new(&quot;FN&quot;, &quot;John Doe&quot;));
+vcard.add_property(VCardProperty::new(&quot;N&quot;, &quot;Doe;John;Michael;Mr.;Jr.&quot;));
+vcard.add_property(VCardProperty::new(&quot;ORG&quot;, &quot;ABC Corporation&quot;));
+vcard.add_property(VCardProperty::new(&quot;TITLE&quot;, &quot;Software Engineer&quot;));
+
+let mut tel_prop = VCardProperty::new(&quot;TEL&quot;, &quot;+1-555-555-1234&quot;);
+tel_prop.add_parameter(&quot;TYPE&quot;, &quot;work&quot;);
+tel_prop.add_parameter(&quot;TYPE&quot;, &quot;voice&quot;);
+vcard.add_property(tel_prop);
+
+let mut email_prop = VCardProperty::new(&quot;EMAIL&quot;, &quot;john@example.com&quot;);
+email_prop.add_parameter(&quot;TYPE&quot;, &quot;work&quot;);
+vcard.add_property(email_prop);
+
+// Add custom extension property
+vcard.add_property(VCardProperty::new(&quot;X-CUSTOM&quot;, &quot;Custom Value&quot;));
+</code></pre>
+<h3 id="working-with-properties">Working with Properties</h3>
+<pre><code class="lang-rust">// Get a single property
+if let Some(tel) = vcard.get_property(&quot;TEL&quot;) {
+    println!(&quot;Phone: {}&quot;, tel.value);
+
+    // Access property parameters
+    if let Some(type_param) = tel.get_parameter(&quot;TYPE&quot;) {
+        println!(&quot;Type: {}&quot;, type_param);
+    }
+}
+
+// Get all properties with the same name
+if let Some(telephones) = vcard.telephones() {
+    for tel in telephones {
+        println!(&quot;Phone: {}&quot;, tel.value);
+        if let Some(types) = tel.get_parameters(&quot;TYPE&quot;) {
+            println!(&quot;Types: {:?}&quot;, types);
+        }
+    }
+}
+</code></pre>
+<h3 id="error-handling">Error Handling</h3>
+<pre><code class="lang-rust">use vcard::{VCardParser, ParseError};
+
+let invalid_data = &quot;VERSION:4.0\nFN:John Doe\nEND:VCARD&quot;;
+
+let mut parser = VCardParser::new();
+match parser.parse(invalid_data) {
+    Ok(vcards) =&gt; println!(&quot;Parsed {} vCard(s) successfully&quot;, vcards.len()),
+    Err(e) =&gt; println!(&quot;Parse error: {}&quot;, e),
+}
+</code></pre>
+<h2 id="api-documentation">API Documentation</h2>
+<h3 id="strongly-typed-api">Strongly Typed API</h3>
+<h4 id="vcardbuilder"><code>VCardBuilder</code></h4>
+<p>Fluent builder for creating vCards with type safety:</p>
+<p><strong>Basic Properties:</strong></p>
+<ul>
+<li><code>version(version)</code> - Set VERSION (typically &quot;4.0&quot;)</li>
+<li><code>formatted_name(name)</code> - Set FN (required)</li>
+<li><code>name(name)</code> - Set N as semicolon-separated string</li>
+<li><code>name_parts(family, given, additional, prefix, suffix)</code> - Set N with separate components</li>
+<li><code>organization(org)</code> - Set ORG</li>
+<li><code>title(title)</code> - Set TITLE</li>
+<li><code>role(role)</code> - Set ROLE</li>
+<li><code>nickname(nickname)</code> - Set NICKNAME</li>
+<li><code>note(note)</code> - Set NOTE</li>
+<li><code>uid(uid)</code> - Set UID</li>
+<li><code>categories(categories)</code> - Set CATEGORIES</li>
+<li><code>revision(rev)</code> - Set REV</li>
+</ul>
+<p><strong>Communication Properties:</strong></p>
+<ul>
+<li><code>telephone(number, types: Vec&lt;TelType&gt;)</code> - Add TEL with type-safe parameters</li>
+<li><code>email(email, types: Vec&lt;EmailType&gt;)</code> - Add EMAIL with type-safe parameters</li>
+<li><code>url(url)</code> - Set URL</li>
+</ul>
+<p><strong>Address Properties:</strong></p>
+<ul>
+<li><code>address(address, types: Vec&lt;AdrType&gt;)</code> - Add ADR as semicolon-separated string</li>
+<li><code>address_parts(po_box, extended, street, locality, region, postal_code, country, types)</code> - Add ADR with separate components</li>
+</ul>
+<p><strong>Personal Properties:</strong></p>
+<ul>
+<li><code>birthday(date)</code> - Set BDAY (format: YYYYMMDD)</li>
+<li><code>anniversary(date)</code> - Set ANNIVERSARY (format: YYYYMMDD)</li>
+<li><code>gender(gender)</code> - Set GENDER</li>
+<li><code>photo(uri)</code> - Set PHOTO</li>
+</ul>
+<p><strong>Extension:</strong></p>
+<ul>
+<li><code>custom_property(name, value)</code> - Add custom/extension property</li>
+<li><code>build()</code> - Build and return the VCardObject</li>
+</ul>
+<h4 id="type-safe-enums">Type-Safe Enums</h4>
+<p><strong><code>TelType</code></strong> - Telephone types:</p>
+<ul>
+<li><code>Text</code>, <code>Voice</code>, <code>Fax</code>, <code>Cell</code>, <code>Video</code>, <code>Pager</code>, <code>TextPhone</code>, <code>Work</code>, <code>Home</code></li>
+</ul>
+<p><strong><code>EmailType</code></strong> - Email types:</p>
+<ul>
+<li><code>Work</code>, <code>Home</code>, <code>Internet</code></li>
+</ul>
+<p><strong><code>AdrType</code></strong> - Address types:</p>
+<ul>
+<li><code>Work</code>, <code>Home</code>, <code>Postal</code>, <code>Parcel</code>, <code>Dom</code>, <code>Intl</code></li>
+</ul>
+<h3 id="generic-api">Generic API</h3>
+<h4 id="vcardobject"><code>VCardObject</code></h4>
+<p>The main vCard container with the following methods:</p>
+<ul>
+<li><code>new()</code> - Create a new empty vCard</li>
+<li><code>builder()</code> - Create a VCardBuilder for fluent API</li>
+<li><code>add_property(property)</code> - Add a property to the vCard</li>
+<li><code>get_property(name)</code> - Get the first property with the given name</li>
+<li><code>get_properties(name)</code> - Get all properties with the given name</li>
+<li><code>version()</code> - Get the VERSION property value</li>
+<li><code>formatted_name()</code> - Get the FN property value</li>
+<li><code>name()</code> - Get the N property value</li>
+<li><code>organization()</code> - Get the ORG property value</li>
+<li><code>title()</code> - Get the TITLE property value</li>
+<li><code>telephones()</code> - Get all TEL properties</li>
+<li><code>emails()</code> - Get all EMAIL properties</li>
+<li><code>addresses()</code> - Get all ADR properties</li>
+</ul>
+<h4 id="vcardproperty"><code>VCardProperty</code></h4>
+<p>Represents a vCard property with:</p>
+<ul>
+<li><code>name</code> - Property name (uppercase)</li>
+<li><code>value</code> - Property value</li>
+<li><code>parameters</code> - HashMap of property parameters</li>
+<li><code>new(name, value)</code> - Create a new property</li>
+<li><code>add_parameter(param_name, param_value)</code> - Add a parameter</li>
+<li><code>get_parameter(param_name)</code> - Get first parameter value</li>
+<li><code>get_parameters(param_name)</code> - Get all parameter values</li>
+</ul>
+<h4 id="vcardparser"><code>VCardParser</code></h4>
+<p>Parser for vCard text:</p>
+<ul>
+<li><code>new()</code> - Create a new parser</li>
+<li><code>parse(text)</code> - Parse vCards from text, returns <code>Result&lt;Vec&lt;VCardObject&gt;, ParseError&gt;</code> containing all vCards found</li>
+</ul>
+<h2 id="building">Building</h2>
+<pre><code class="lang-bash">cargo build
+</code></pre>
+<h2 id="testing">Testing</h2>
+<pre><code class="lang-bash">cargo test
+</code></pre>
+<p>All tests should pass:</p>
+<pre><code>running 12 tests
+test tests::test_builder_basic ... ok
+test tests::test_builder_complete_vcard ... ok
+test tests::test_builder_with_address_parts ... ok
+test tests::test_builder_with_custom_property ... ok
+test tests::test_builder_with_email ... ok
+test tests::test_builder_with_telephone ... ok
+test tests::test_new_vcard_object ... ok
+test tests::test_parse_multiple_vcards ... ok
+test tests::test_parse_simple_vcard ... ok
+test tests::test_parse_vcard_with_multiple_properties ... ok
+test tests::test_parse_vcard_with_parameters ... ok
+test tests::test_parse_vcard_with_properties ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured
+</code></pre>
+<h2 id="project-structure">Project Structure</h2>
+<pre><code>vcard-rust/
+├── src/
+│   └── lib.rs              # Main library implementation
+├── Cargo.toml              # Package configuration
+└── README.md               # This file
+</code></pre>
+<h2 id="rfc-6350-compliance">RFC 6350 Compliance</h2>
+<p>This implementation follows RFC 6350 (vCard Format Specification):</p>
+<ul>
+<li>Line folding/unfolding (Section 3.2)</li>
+<li>Content lines (Section 3.3)</li>
+<li>Property parameters (Section 5)</li>
+<li>Property value data types (Section 4)</li>
+<li>vCard properties (Section 6)</li>
+<li>Escape sequences for special characters</li>
+</ul>
+<h2 id="license">License</h2>
+<p>MIT License - This implementation is provided for educational and commercial use.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc6350.html">RFC 6350 - vCard Format Specification</a></li>
+<li><a href="https://datatracker.ietf.org/doc/rfc9554/">RFC 9554 - vCard Format Extensions for JSContact</a></li>
+<li><a href="https://www.iana.org/assignments/vcard-elements/vcard-elements.xhtml">IANA vCard Elements Registry</a></li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Contributions are welcome! Please ensure all tests pass before submitting pull requests.</p>
+<ol>
+<li>Fork the repository</li>
+<li>Create a feature branch</li>
+<li>Make your changes</li>
+<li>Add tests for new functionality</li>
+<li>Ensure all tests pass: <code>cargo test</code></li>
+<li>Submit a pull request</li>
+</ol>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/spec-works/vCard/blob/main/docs/rust/index.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <a href='https://spec-works.github.io/'>SpecWorks Factory</a> | <a href='https://github.com/spec-works/vCard'>GitHub</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

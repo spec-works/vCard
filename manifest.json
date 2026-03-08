@@ -1,0 +1,409 @@
+{
+  "source_base_path": "/home/runner/work/vCard/vCard/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.Address.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.Address.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.Address",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.Address.yml\" sourcestartlinenumber=\"1\">Represents a postal address with type information</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.AdrType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.AdrType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.AdrType",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.AdrType.yml\" sourcestartlinenumber=\"1\">Address type parameter values (can be combined with bitwise OR)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.Email.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.Email.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.Email",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.Email.yml\" sourcestartlinenumber=\"1\">Represents an email address with type information</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.EmailType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.EmailType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.EmailType",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.EmailType.yml\" sourcestartlinenumber=\"1\">Email type parameter values (can be combined with bitwise OR)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.ParseException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.ParseException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.ParseException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.StructuredAddress.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.StructuredAddress.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.StructuredAddress",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.StructuredAddress.yml\" sourcestartlinenumber=\"1\">Represents a structured address value</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.StructuredName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.StructuredName.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.StructuredName",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.StructuredName.yml\" sourcestartlinenumber=\"1\">Represents a structured name value</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.TelType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.TelType.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.TelType",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.TelType.yml\" sourcestartlinenumber=\"1\">Telephone type parameter values (can be combined with bitwise OR)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.Telephone.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.Telephone.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.Telephone",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.Telephone.yml\" sourcestartlinenumber=\"1\">Represents a telephone number with type information</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardComponent",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardComponent.yml\" sourcestartlinenumber=\"1\">Base class for all vCard components</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardObject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardObject",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardObject.yml\" sourcestartlinenumber=\"1\">Root vCard object (VCARD)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardParser",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardParser.yml\" sourcestartlinenumber=\"1\">Parser for text/vcard format (RFC 6350)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardProperty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardProperty.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardProperty",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardProperty.yml\" sourcestartlinenumber=\"1\">Represents a vCard property with parameters and value</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardSerializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardSerializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardSerializer",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardSerializer.yml\" sourcestartlinenumber=\"1\">Serializer for text/vcard format (RFC 6350)</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardSerializerExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardSerializerExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardSerializerExtensions",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardSerializerExtensions.yml\" sourcestartlinenumber=\"1\">Extension methods for convenient serialization</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.VCardValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.VCardValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.VCardValidator",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.VCardValidator.yml\" sourcestartlinenumber=\"1\">Validator for vCard components according to RFC 6350</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.ValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.ValidationResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard.ValidationResult",
+      "Summary": "<p sourcefile=\"dotnet/api/VCard.ValidationResult.yml\" sourcestartlinenumber=\"1\">Result of validation operation</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "dotnet/api/VCard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/VCard.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "VCard",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "dotnet/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/api/toc.html"
+        },
+        ".json": {
+          "relative_path": "dotnet/api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "dotnet/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "dotnet/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "dotnet/toc.html"
+        },
+        ".json": {
+          "relative_path": "dotnet/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "python/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "python/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "python/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "python/toc.html"
+        },
+        ".json": {
+          "relative_path": "python/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "rust/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "rust/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "rust/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "rust/toc.html"
+        },
+        ".json": {
+          "relative_path": "rust/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "typescript/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "typescript/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "typescript/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "typescript/toc.html"
+        },
+        ".json": {
+          "relative_path": "typescript/toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
