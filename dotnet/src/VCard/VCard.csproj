@@ -26,6 +26,8 @@
     <!-- Strong Naming -->
     <AssemblyName>VCard</AssemblyName>
     <RootNamespace>VCard</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>VCard.snk</AssemblyOriginatorKeyFile>
 
     <!-- Source Link Support -->
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
